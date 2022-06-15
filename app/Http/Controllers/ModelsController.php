@@ -8,6 +8,6 @@ class ModelsController extends Controller
 {
     public function models()
     {
-        return view ('User.models');
+        return view ('user.models');
     }
 }

@@ -10,4 +10,18 @@ class ModelsController extends Controller
     {
         return view ('user.models');
     }
+
+    public function individual()
+    {
+        return view ('user.individualmodel');
+    }
+
+    public function apply()
+    {
+        return view('user.apply');
+    }
+
+    
+
+
 }

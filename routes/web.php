@@ -23,3 +23,8 @@ Route::get('/', function () {
 Route::any('/',[HomeController::class,'index']);
 
 Route::any('models',[ModelsController::class,'models']);
+
+Route::any('individual',[ModelsController::class,'individual']);
+
+Route::any('apply',[ModelsController::class,'apply']);
+

@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
 
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Manyatta Films And Modelling Agency</title>
 
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" type="text/css" href="{{ secure_asset('css/manyatta.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/manyatta.css')}}">
 
 </head>
 
@@ -16,7 +18,7 @@
 
         <div style="padding-top:20rem;" class="flex-container">
             <div class="row">
-                <div class="image">
+                <a href="{{ url('individual')}}"><div class="image">
                     <img src="images/model2.jpg" class="img-responsive" alt="img">
                    <div class="description">
                       <span>
@@ -26,7 +28,8 @@
                        <h4 style="font-size:13px !Important">Commercial Model</h4>
                     </div>
                 </div>
-                <div class="image">
+                </a>
+                <a href="{{ url('individual')}}"><div class="image">
                     <img src="images/model2.jpg" class="img-responsive" alt="img">
                    <div class="description">
                       <span>
@@ -36,7 +39,8 @@
                        <h4 style="font-size:13px !Important">Commercial Model</h4>
                     </div>
                 </div>
-                <div class="image">
+                </a>
+                <a href="{{ url('individual')}}"><div class="image">
                     <img src="images/model2.jpg" class="img-responsive" alt="img">
                    <div class="description">
                       <span>
@@ -46,7 +50,8 @@
                        <h4 style="font-size:13px !Important">Commercial Model</h4>
                     </div>
                 </div>
-                <div class="image">
+                </a>
+                <a href="{{ url('individual')}}"><div class="image">
                     <img src="images/model2.jpg" class="img-responsive" alt="img">
                    <div class="description">
                       <span>
@@ -56,7 +61,8 @@
                        <h4 style="font-size:13px !Important">Commercial Model</h4>
                     </div>
                 </div>
-                <div class="image">
+                </a>
+                <a href="{{ url('individual')}}"><div class="image">
                     <img src="images/model2.jpg" class="img-responsive" alt="img">
                    <div class="description">
                       <span>
@@ -66,7 +72,8 @@
                        <h4 style="font-size:13px !Important">Commercial Model</h4>
                     </div>
                 </div>
-                <div class="image">
+                </a>
+                <a href="{{ url('individual')}}"><div class="image">
                     <img src="images/model2.jpg" class="img-responsive" alt="img">
                    <div class="description">
                       <span>
@@ -76,66 +83,7 @@
                        <h4 style="font-size:13px !Important">Commercial Model</h4>
                     </div>
                 </div>
-                <div class="image">
-                    <img src="images/model2.jpg" class="img-responsive" alt="img">
-                   <div class="description">
-                      <span>
-                         <h3 style="font-size:20px !Important">Aleisha Amanda</h3>
-                      </span>
-
-                       <h4 style="font-size:13px !Important">Commercial Model</h4>
-                    </div>
-                </div>
-                <div class="image">
-                    <img src="images/model2.jpg" class="img-responsive" alt="img">
-                   <div class="description">
-                      <span>
-                         <h3 style="font-size:20px !Important">Aleisha Amanda</h3>
-                      </span>
-
-                       <h4 style="font-size:13px !Important">Commercial Model</h4>
-                    </div>
-                </div>
-                <div class="image">
-                    <img src="images/model2.jpg" class="img-responsive" alt="img">
-                   <div class="description">
-                      <span>
-                         <h3 style="font-size:20px !Important">Aleisha Amanda</h3>
-                      </span>
-
-                       <h4 style="font-size:13px !Important">Commercial Model</h4>
-                    </div>
-                </div>
-                <div class="image">
-                    <img src="images/model2.jpg" class="img-responsive" alt="img">
-                   <div class="description">
-                      <span>
-                         <h3 style="font-size:20px !Important">Aleisha Amanda</h3>
-                      </span>
-
-                       <h4 style="font-size:13px !Important">Commercial Model</h4>
-                    </div>
-                </div>
-                <div class="image">
-                    <img src="images/model2.jpg" class="img-responsive" alt="img">
-                   <div class="description">
-                      <span>
-                         <h3 style="font-size:20px !Important">Aleisha Amanda</h3>
-                      </span>
-
-                       <h4 style="font-size:13px !Important">Commercial Model</h4>
-                    </div>
-                </div>
-                <div class="image">
-                    <img src="images/model2.jpg" class="img-responsive" alt="img">
-                   <div class="description">
-                      <span>
-                         <h3 style="font-size:20px !Important">Aleisha Amanda</h3>
-                      </span>
-
-                       <h4 style="font-size:13px !Important">Commercial Model</h4>
-                    </div>
-                </div>
+                </a>
 
             </div>
         </div>

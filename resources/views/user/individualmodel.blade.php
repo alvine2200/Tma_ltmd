@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,7 +11,7 @@
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-	<link rel="stylesheet" type="text/css" href="{{ secure_asset('css/manyatta.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/manyatta.css')}}">
     <style>
         .model-container{
             display: flex;
@@ -28,7 +28,7 @@
             justify-content: center;
             margin: 15px;
         }
-       
+
          h5{
             font-size: 20px;
             margin-bottom: 20px;
@@ -41,8 +41,8 @@
         }
         .model-container .row .appearance{
             margin-left: 50px;
-            
-            flex-direction: row; 
+
+            flex-direction: row;
         }
        .model-container .row .appearance > img{
             display: flex;
@@ -57,7 +57,7 @@
 
         @media(max-width: 445px){
 
-           
+
             h5{
                 font-size: 14px !important;
             }
@@ -86,7 +86,7 @@
                 <img src="images/model2.jpg" class="img-responsive" alt="img">
             </div>
             <div class="appearance">
-               
+
                 <span>
                     <h5 style="color:blue; font-size:30px; font-weight:bold; margin-bottom:20px;">Physical characteristics</h5>
                     <h5>Name: Alicia Amanda</h5>

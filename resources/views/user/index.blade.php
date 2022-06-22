@@ -26,6 +26,9 @@
         .inputBox{
             padding-top: 2rem;
         }
+        iframe{
+           width: 200px; 
+        }
     </style>
 </head>
 <body>
@@ -217,12 +220,16 @@
             <span>your message</span>
             <textarea name="message" placeholder="enter your message" id="" cols="30" rows="10"></textarea>
         </div>
+        <div class="input">
+            <span>Comments(Extra comments)</span>
+            <textarea name="message" placeholder="enter your comments" id="" cols="30" rows="10"></textarea>
+        </div>
       </div>
       <input type="submit" value="Submit" name="" class="btn">
 
     </form>
 </section>
-<!--order section ends-->
+<!--order section ends-->  
 
 <!--footer section starts-->
  @include('user.footer');

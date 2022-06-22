@@ -36,6 +36,7 @@
 			<a href="#">twitter</a>
 
 		</div>
+        
 
 	</div>
 	<div class="credit">copyright @ {{now()->format('Y')}}</div> by <span>Alvine Llavu</span></div>

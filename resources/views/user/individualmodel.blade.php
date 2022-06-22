@@ -45,6 +45,7 @@
             box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
         }
         .model-container .row .appearance{
+            padding-left: 30px;
             margin-left: 50px;
             flex-direction: row;
         }
@@ -60,8 +61,6 @@
         }
 
         @media(max-width: 445px){
-
-
             h5{
                 font-size: 14px !important;
             }
@@ -72,12 +71,15 @@
                 flex-wrap: wrap;
                 display:flex;
                 margin-top: 20px;
+                padding-top: 20px;
             }
             .model-container .row .image > img {
                 width: 100%;
                 object-fit: contain;
             }
         }
+
+        
             .image-container{
                 justify-content: center;
                 align-items: center;
@@ -119,10 +121,10 @@
               <div class="appearance">
 
                 <span>
-                    <h5 style="color:blue; font-size:30px; font-weight:bold; margin-bottom:20px;">Name: Alicia Amanda</h5>
-                    <h5>MeasureMents: W-20, H-20, B/C-20, S/S-42,H/C=blue, Hips-14 </h5>
-                    <h5>Appearance : Tall dark</h5>
-                    <h5>Categories : Casual, Commercial</h5>
+                    <h5 style="color:blue; font-size:50px; font-weight:bold; margin-bottom:20px;"> Alicia Amanda</h5>
+                    <h5> Wt-20, Ht-20, B/C-20, SH-42, HC-blue, H-14 </h5>
+                    <h5> CX: brown,
+                    <h5> Casual, Commercial</h5>
                     <h5>Instagram : <a href="https://www.instagram.com/manyattafilms/?hl=en">
                                         <i class="fab fa-instagram-square"></i>
                                      </a>

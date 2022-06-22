@@ -8,7 +8,7 @@
 			<a class="active" href="{{ url('/')}}">home</a>
 			<a href="{{url('models')}}">models</a>
 			<a href="{{url('apply')}}">Apply</a>
-			<a href="#contact_us">contact us</a>
+			<a href="{{url('contact')}}">contact us</a>
 		</nav>
 
        <!-- <a href="#"><i class="fas fa-bars"></i></a> -->
@@ -30,4 +30,4 @@
     <!--search form ends-->
 
 
- 
+

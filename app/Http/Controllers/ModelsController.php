@@ -21,6 +21,10 @@ class ModelsController extends Controller
         return view('user.apply');
     }
 
+    public function contact()
+    {
+        return view('user.contact');
+    }
 
 
 

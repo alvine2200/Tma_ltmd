@@ -28,3 +28,5 @@ Route::any('individual',[ModelsController::class,'individual']);
 
 Route::any('apply',[ModelsController::class,'apply']);
 
+Route::any('contact',[ModelsController::class,'contact']);
+

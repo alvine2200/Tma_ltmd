@@ -50,7 +50,8 @@ var swiper = new Swiper(".home-slider", {
         },
         loop:true,
 
-        });
+    });
+
 
 
 var swiper = new Swiper(".review-slider", {
@@ -78,7 +79,32 @@ var swiper = new Swiper(".review-slider", {
     slidesPerView: 3,
    },
 
-  }, 
+  },
 
 });
+
+var swiper = new Swiper(".swiper", {
+    spaceBetween: 15,
+    centeredSlides: true,
+
+    autoplay: {
+      delay: 7500,
+      disableOnInteraction: false,
+    },
+
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    loop:true,
+
+});
+
+
+
 

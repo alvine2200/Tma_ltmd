@@ -21,7 +21,7 @@ class ModelsController extends Controller
         return view('user.apply');
     }
 
-    
+
 
 
 }

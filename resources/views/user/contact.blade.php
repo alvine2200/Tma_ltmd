@@ -61,6 +61,14 @@
             justify-content: center;
             object-fit: contain;
         }
+        .error{
+            color: red;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            font-size:16px;            
+        }
+
 
 
         @media(max-width:445px){
@@ -83,6 +91,12 @@
                 flex-wrap: wrap;
                 width: 300px;
             }
+            .error{
+            color: red;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
 
         }
     </style>
@@ -94,8 +108,22 @@
     <section style="padding-top: 17rem;" class="order" id="contact_us">
         <h3 class="sub-heading">Contact us</h3>
         <h1 class="heading">contact us today to get intouch with our models</h1>
+       
+       
+        
 
         <form action="{{ url('contact_form') }}" method="post">
+            <span style="margin-left:50px;" class="error">
+                @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $message)
+                            <li>{{ $message }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                 @endif
+               </span>
             @csrf
            <div class="inputBox">
             <div class="input">
@@ -130,7 +158,7 @@
                 <textarea name="comments" placeholder="enter your comments" id="" cols="30" rows="10"></textarea>
             </div>
           </div>
-          <input type="submit" value="Submit" onclick=MyFunction()  class="btn">
+          <input type="submit" value="Submit" id="contact_submit" onclick=MyFunction()  class="btn">
         </form>
     </section>
 
@@ -145,19 +173,14 @@
         </div>
     </div>
 
-
-
-
-
     @include('user.footer');
 
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        function myFunction(){
-            swal("swal","message","success");
-        }
-    </script>
+        @if(session()->has('success'))
+        <script>
+            swal("form submitted successfully","Form submitted","success");
+        </script>
+      @endif
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     

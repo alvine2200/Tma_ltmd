@@ -37,6 +37,7 @@ class Storerequest extends FormRequest
     {
         return [
             'name.required'=>'name field is required',
+            'phone.min'=>'minimum characters is 10',
             'phone.required'=>'phone field is required',
             'subject.required'=>'subject field is required',
             'added.required'=>'added field is required',

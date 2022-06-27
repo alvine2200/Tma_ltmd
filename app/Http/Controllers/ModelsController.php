@@ -33,7 +33,7 @@ class ModelsController extends Controller
         $validated=$request->validated();
         $contact::firstOrCreate($validated);
 
-        return back()->withSuccess('Form is successfully sent, Thank you');
+        return back()->with('success','Form is successfully sent, Thank you');
 
     }
 

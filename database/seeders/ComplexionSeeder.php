@@ -15,15 +15,17 @@ class ComplexionSeeder extends Seeder
      */
     public function run()
     {
-        $complexion=[
+        Complexion::upsert([
             ['name'=>'Very Dark'],
             ['name'=>'Dark'],
             ['name'=>'Dark Chocolate'],
             ['name'=>'Chocolate'],
             ['name'=>'light'],
             ['name'=>'Very light'],
-        ];
+        ],
+        
+        ['name']);
 
-        Complexion::firstOrCreate($complexion);
+        
     }
 }

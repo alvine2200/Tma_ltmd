@@ -15,7 +15,7 @@ class HairColorSeeder extends Seeder
      */
     public function run()
     {
-        $hairs=[
+        HairColor::upsert([
             ['name'=>'Black 1'],
             ['name'=>'Black 2'],
             ['name'=>'Brown'],
@@ -23,8 +23,6 @@ class HairColorSeeder extends Seeder
             ['name'=>'Red'],
             ['name'=>'Grey'],
             ['name'=>'White'],
-        ];
-
-        HairColor::firstOrCreate($hairs);
+        ],['name']);
     }
 }

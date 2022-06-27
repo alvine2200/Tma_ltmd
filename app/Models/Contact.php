@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Time_Measurement extends Model
+class Contact extends Model
 {
     use HasFactory;
 
-    protected $fillable=['name'];
+    protected $fillable=['name','phone','address','subject','comments','message'];
 
-    protected $table='time__measurements';
+    protected $table='contacts';
 }

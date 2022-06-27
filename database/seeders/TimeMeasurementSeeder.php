@@ -15,7 +15,7 @@ class TimeMeasurementSeeder extends Seeder
      */
     public function run()
     {
-        $time_measurements=[
+        Time_Measurement::upsert([
             ['name'=>'This week'],
             ['name'=>'This month'],
             ['name'=>'Three Months ago'],
@@ -23,8 +23,6 @@ class TimeMeasurementSeeder extends Seeder
             ['name'=>'About one year ago'],
             ['name'=>'More than one year ago'],
             ['name'=>'Not sure'],
-        ];
-
-        Time_Measurement::firstOrCreate($time_measurements);
+        ],['name']);
     }
 }

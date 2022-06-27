@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
 use Illuminate\Http\Request;
+use App\Http\Requests\Storerequest;
 
 class ModelsController extends Controller
 {
@@ -24,6 +26,15 @@ class ModelsController extends Controller
     public function contact()
     {
         return view('user.contact');
+    }
+
+    public function contact_form(Storerequest $request, Contact $contact){
+       
+        $validated=$request->validated();
+        $contact::firstOrCreate($validated);
+
+        return back()->withSuccess('Form is successfully sent, Thank you');
+
     }
 
 

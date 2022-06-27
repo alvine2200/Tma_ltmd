@@ -5,38 +5,41 @@
 	<div class="box-container">
 		<div class="box">
 			<h3>locations</h3>
-			<a href="#">nairobi</a>
-			<a href="#">mombasa</a>
-			<a href="#">kisumu</a>
-			<a href="#">nakuru</a>
-			<a href="#">kakamega</a>
+			<a href="#">nairobi<br>
+                Githurai 45 <br>
+                KAMUKABI House<br>
+                Ground Floor<br>
+            </a>
+
 		</div>
 		<div class="box">
 			<h3>quick links</h3>
-			<a href="#">home</a>
-			<a href="#">models</a>
-			<a href="#">about</a>
-			<a href="#">contact us</a>
-			<a href="#">order</a>
+			<a href="{{url('/')}}">Home</a>
+			<a href="{{url('models')}}">Models</a>
+			<a href="{{url('apply')}}">Apply</a>
+			<a href="{{url('contact')}}">Contact us</a>
+
 		</div>
 		<div class="box">
 			<h3>contact info</h3>
-			<a href="#">+2547 121 356 43</a>
-			<a href="#">+2547 128 639 95</a>
-			<a href="#">+2547 121 058 43</a>
-			<a href="#">alvinellavu@gmail.com</a>
-			<a href="#">agandagracious@gmail.com</a>
+			<a href="#"><i class="fab fa-whatsapp fa-lg"></i>
+                 <i class="fas fa-phone-square-alt fa-lg"></i>
+                 <i class="fas fa-sms fa-lg"></i>
+                 +2547 891 335 41
+            </a>
+
+			<a href="#">Manyattafilmsltmd@gmail.com</a>
+
 		</div>
 
 		<div class="box">
 			<h3>follow us</h3>
-			<a href="#">facebook</a>
-			<a href="#">instagram</a>
-			<a href="#">linkedln</a>
-			<a href="#">twitter</a>
+			<a href="https://www.facebook.com/ManyattaFilms/"><i class="fab fa-facebook fa-lg"></i></a>
+			<a href="https://www.instagram.com/manyattafilms/?hl=en"><i class="fab fa-instagram-square fa-lg"></i></a>
+			<a href="https://www.youtube.com/channel/UC1woDlRjC6Kp84mCJdOQjyw"><i class="fab fa-youtube fa-lg"></i></a>
 
 		</div>
-        
+
 
 	</div>
 	<div class="credit">copyright @ {{now()->format('Y')}}</div> by <span>Alvine Llavu</span></div>

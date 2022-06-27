@@ -15,7 +15,7 @@ class ShoeSizeSeeder extends Seeder
      */
     public function run()
     {
-        $shoe_size=[
+       ShoeSize::upsert([
             ['name'=>'34'],
             ['name'=>'34.5'],
             ['name'=>'35'],
@@ -42,8 +42,6 @@ class ShoeSizeSeeder extends Seeder
             ['name'=>'45.5'],
             ['name'=>'46'],
 
-        ];
-
-        ShoeSize::firstOrCreate($shoe_size);
+        ],['name']);
     }
 }

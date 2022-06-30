@@ -66,7 +66,7 @@
             justify-content: center;
             align-items: center;
             margin: 20px;
-            font-size:16px;            
+            font-size:16px;
         }
 
 
@@ -108,14 +108,14 @@
     <section style="padding-top: 17rem;" class="order" id="contact_us">
         <h3 class="sub-heading">Contact us</h3>
         <h1 class="heading">contact us today to get intouch with our models</h1>
-       
-       
-        
+
+
+
 
         <form action="{{ url('contact_form') }}" method="post">
-            <span style="margin-left:50px;" class="error">
+            <span class="error">
                 @if ($errors->any())
-                <div class="alert alert-danger">
+                <div style="margin-left:50px;"  class="alert alert-danger">
                     <ul>
                         @foreach ($errors->all() as $message)
                             <li>{{ $message }}</li>
@@ -128,19 +128,19 @@
            <div class="inputBox">
             <div class="input">
                 <span>name</span>
-                <input type="text" name="name" placeholder="Enter your name" >
+                <input type="text" required name="name" placeholder="Enter your name" >
             </div>
             <div class="input">
                 <span>phone number</span>
-                <input type="number" name="phone" placeholder="Enter your phone number" >
+                <input type="number" required name="phone" placeholder="Enter your phone number" >
             </div>
             <div class="input">
                 <span>address(location) </span>
-                <input type="text" name="address" placeholder="Enter your address" >
+                <input type="text"  required name="address" placeholder="Enter your address" >
             </div>
             <div class="input">
                 <span>Subject</span>
-                <select  name="subject">
+                <select required  name="subject">
                     <option value="">--select option--</option>
                     <option value="Query">Query</option>
                     <option value="Problem Applying">Problem Applying</option>
@@ -151,11 +151,11 @@
 
             <div class="input">
                 <span>Message</span>
-                <textarea name="message" placeholder="enter your message" id="" cols="30" rows="10"></textarea>
+                <textarea name="message" required placeholder="enter your message" id="" cols="30" rows="10"></textarea>
             </div>
             <div class="input">
                 <span>Comments(extra comments)</span>
-                <textarea name="comments" placeholder="enter your comments" id="" cols="30" rows="10"></textarea>
+                <textarea name="comments" required placeholder="enter your comments" id="" cols="30" rows="10"></textarea>
             </div>
           </div>
           <input type="submit" value="Submit" id="contact_submit" onclick=MyFunction()  class="btn">
@@ -183,8 +183,8 @@
       @endif
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    
-    
+
+
     <script src="js/manyatta.js"></script>
     <script src="js/swiper.js"></script>
 

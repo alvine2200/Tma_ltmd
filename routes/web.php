@@ -31,3 +31,5 @@ Route::any('apply',[ModelsController::class,'apply']);
 Route::any('contact',[ModelsController::class,'contact']);
 
 Route::post('contact_form',[ModelsController::class,'contact_form']);
+
+Route::post('application_form',[ModelsController::class,'application_form']);

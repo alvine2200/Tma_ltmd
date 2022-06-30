@@ -9,6 +9,7 @@
 
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 	<link rel="stylesheet" type="text/css" href="css/manyatta.css">
@@ -27,7 +28,7 @@
             padding-top: 2rem;
         }
         iframe{
-           width: 200px; 
+           width: 200px;
         }
     </style>
 </head>
@@ -190,20 +191,20 @@
     <h3 class="sub-heading">Contact us</h3>
     <h1 class="heading">contact us today to get intouch with our models</h1>
 
-    <form action="" method="post">
+    <form action="{{url('contact_form')}}" method="post">
         @csrf
        <div class="inputBox">
         <div class="input">
             <span>name</span>
-            <input type="text" placeholder="Enter your name" >
+            <input type="text" name="name" required placeholder="Enter your name" >
         </div>
         <div class="input">
             <span>phone number</span>
-            <input type="number" placeholder="Enter your phone number" >
+            <input type="number" name="phone" required placeholder="Enter your phone number" >
         </div>
         <div class="input">
             <span>address(location) </span>
-            <input type="text" placeholder="Enter your address" >
+            <input type="text"name="address" required placeholder="Enter your address" >
         </div>
         <div class="input">
             <span>address</span>
@@ -218,25 +219,32 @@
 
         <div class="input">
             <span>your message</span>
-            <textarea name="message" placeholder="enter your message" id="" cols="30" rows="10"></textarea>
+            <textarea name="message" required placeholder="enter your message" id="" cols="30" rows="10"></textarea>
         </div>
         <div class="input">
             <span>Comments(Extra comments)</span>
-            <textarea name="message" placeholder="enter your comments" id="" cols="30" rows="10"></textarea>
+            <textarea name="comments" required placeholder="enter your comments" id="" cols="30" rows="10"></textarea>
         </div>
       </div>
-      <input type="submit" value="Submit" name="" class="btn">
+      <input type="submit" value="Submit"  name="contact-submit" class="btn">
 
     </form>
 </section>
-<!--order section ends-->  
+<!--order section ends-->
 
 <!--footer section starts-->
  @include('user.footer');
 
 <!--footer section ends-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+@if(session()->has('success'))
+<script>
+    swal("form submitted successfully","Done","success");
+</script>
+@endif
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 
 <script src="{{asset('js/manyatta.js')}}"></script>
 </body>

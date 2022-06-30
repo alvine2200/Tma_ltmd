@@ -28,7 +28,7 @@
                  +2547 891 335 41
             </a>
 
-			<a href="#">Manyattafilmsltmd@gmail.com</a>
+			<a href="#">Manyattafilms@gmail.com</a>
 
 		</div>
 

@@ -37,7 +37,7 @@
         <h3 style="padding-top:17rem" class="sub-heading">Join us</h3>
         <h1 class="heading">Complete the form below and submit your request</h1>
 
-        <form action="#" method="post">
+        <form action="{{url('application_form')}}" method="post" enctype="multipart/form-data">
             @csrf
             <span style="padding-bottom:30px; " class="heading" >
             <a href="#" class="btn">Section 1, Personal Information</a>
@@ -46,7 +46,7 @@
            <div style="padding-bottom: 30px;" class="inputBox">
                 <div class="input">
                     <span>Full Name</span>
-                    <input type="text" name="fullnames" placeholder="Enter your names" required >
+                    <input type="text" name="fullname" placeholder="Enter your names" required >
                 </div>
                 <div class="input">
                     <span>Nick name</span>
@@ -138,11 +138,11 @@
             </div>
             <div class="input">
                 <span>Hair Length (Where does it reach e.g on the back, neck, shoulder, etc.)</span>
-                <input type="text" name="hair" placeholder="what's your hair length" required>
+                <input type="text" name="hairlength" placeholder="what's your hair length" required>
             </div>
             <div class="input">
                 <span>Hips (Inches)</span>
-                <input type="number" name="hips" placeholder="what's your email address" required >
+                <input type="number" name="hips" placeholder="what's your hip size" required >
             </div>
             <div class="input">
                 <span>Waist (Inches) Ladies measure high waist</span>
@@ -158,7 +158,7 @@
             </div>
             <div class="input">
                 <span>When last did you take measurements?</span>
-                <select style="width:100% !Important;" name="shoe" id="shoe">
+                <select style="width:100% !Important;" name="measurement_time" id="shoe">
                     <option>--Select Option--</option>
                     <option value="Male">This Week</option>
                     <option value="Female">This Month</option>
@@ -176,21 +176,21 @@
                 <div class="input">
                     <span>Upload a clear headshot<br>
                          without makeup</span>
-                    <input type="file" name="headshot" required>
+                    <input type="file" name="headshot" required >
                     <img src="images/model2.jpg" style="width: 150px; display:flex; flex-wrap: wrap; padding:20px; height:150px;!Important"class="img-responsive" alt="img">
                 </div>
                 <div class="input">
                     <span>Upload a clear full body shot facing forward<br>
                     Wear fitting outfit(Pants and Top)
                     </span>
-                    <input type="file" name="fullbody" required>
-                    <img src="images/model2.jpg" style="width: 150px; display:flex; flex-wrap: wrap; padding:20px; height:150px;!Important"class="img-responsive" alt="img">
+                    <input type="file" name="fullbody" required >
+                    <img src="images/model2.jpg"  style="width: 150px; display:flex; flex-wrap: wrap; padding:20px; height:150px;!Important"class="img-responsive" alt="img">
                 </div>
                 <div class="input">
                     <span>Upload a clear full body shot facing sideways<br>
                     Wear fitting outfit(Pants and Top)
                     </span>
-                    <input type="file" name="fullbody" required>
+                    <input type="file" name="sideway" required >
                     <img src="images/model2.jpg" style="width: 150px; display:flex; flex-wrap: wrap; padding:20px; height:150px;!Important"class="img-responsive" alt="img">
                 </div>
           </div>
@@ -209,11 +209,11 @@
 
             <div class="input">
                 <span>What are your hobbies?</span>
-                <input type="text" name="hobby" placeholder="Tell us about your hobbies...." required>
+                <input type="text" name="hobbies" placeholder="Tell us about your hobbies...." required>
             </div>
             <div class="input">
                 <span>Why do you want to venture into modelling?</span>
-                <input type="text" name="why" placeholder="Express yourself...." required>
+                <input type="text" name="venture" placeholder="Express yourself...." required>
             </div>
             <div class="input">
                 <span>What's your main goal as a model?</span>
@@ -226,7 +226,7 @@
             </div>
             <div class="input">
                 <span>What's the longest Photo shoot you've done?</span>
-                <input type="text" name="time" placeholder="Type here..." required>
+                <input type="text" name="longest" placeholder="Type here..." required>
             </div>
             <div class="input">
                 <span>Have you done professional shoot before?</span>
@@ -278,15 +278,15 @@
             </div>
             <div class="input">
                 <span>Where do you see yourself in 5 years?</span>
-                <textarea name="response" placeholder="Express yourself" required  cols="20" rows="7"></textarea>
+                <textarea name="fiveyears" placeholder="Express yourself" required  cols="20" rows="7"></textarea>
             </div>
             <div class="input">
                 <span>Who is your favourite model and why?</span>
-                <textarea name="response" placeholder="Express yourself" required  cols="20" rows="7"></textarea>
+                <textarea name="favourite" placeholder="Express yourself" required  cols="20" rows="7"></textarea>
             </div>
             <div class="input">
                 <span>What are the best 4 physical features(physique) and why?</span>
-                <textarea name="response" placeholder="Express yourself" required  cols="20" rows="7"></textarea>
+                <textarea name="physique" placeholder="Express yourself" required  cols="20" rows="7"></textarea>
             </div>
             <div class="input">
                 <span>Explain reasons for the above response?</span>
@@ -306,19 +306,19 @@
             </div>
             <div class="input">
                 <span>What's the hardest photo shoot you've done?</span>
-                <textarea name="photo_shoot" placeholder="Express yourself" required  cols="20" rows="7"></textarea>
+                <textarea name="hardest_shoot" placeholder="Express yourself" required  cols="20" rows="7"></textarea>
             </div>
             <div class="input">
                 <span>What would make you give up on modelling?</span>
-                <textarea name="career" placeholder="Express yourself" required cols="20" rows="7"></textarea>
+                <textarea name="give_up" placeholder="Express yourself" required cols="20" rows="7"></textarea>
             </div>
             <div class="input">
                 <span>Describe your shoot experience?</span>
-                <textarea name="describe" placeholder="Express yourself" required  cols="20" rows="7"></textarea>
+                <textarea name="describe_shoot" placeholder="Express yourself" required  cols="20" rows="7"></textarea>
             </div>
             <div class="input">
                 <span>Tell us about yourself</span>
-                <textarea name="about" placeholder="Express yourself" required  cols="20" rows="7"></textarea>
+                <textarea name="about_yourself" placeholder="Express yourself" required  cols="20" rows="7"></textarea>
             </div>
             <div class="input">
                 <span>What's your greatest weakness as a person, why?</span>
@@ -330,44 +330,44 @@
             </div>
             <div class="input">
                 <span>How Comfortable are you showing your skin and why?</span>
-                <textarea name="skin" placeholder="Express yourself" required  cols="20" rows="7"></textarea>
+                <textarea name="skin_show" placeholder="Express yourself" required  cols="20" rows="7"></textarea>
             </div>
             <div class="input">
                 <span>What are your 4 best personality trait?</span>
-                <textarea name="response" placeholder="Express yourself" required  cols="20" rows="7"></textarea>
+                <textarea name="personalities" placeholder="Express yourself" required  cols="20" rows="7"></textarea>
             </div>
             <div class="input">
                 <span>How well do you communicate with others?</span>
-                <textarea name="response" placeholder="Express yourself" required  cols="20" rows="7"></textarea>
+                <textarea name="communication" placeholder="Express yourself" required  cols="20" rows="7"></textarea>
             </div>
             <div class="input">
                 <span>How would you deal with an arrogant client?</span>
-                <textarea name="response" placeholder="Express yourself" required  cols="20" rows="7"></textarea>
+                <textarea name="arrogancy" placeholder="Express yourself" required  cols="20" rows="7"></textarea>
             </div>
             <div class="input">
                 <span>Do you have any experience with critism, How do you handle it?</span>
-                <textarea name="response" placeholder="Express yourself" required  cols="20" rows="7"></textarea>
+                <textarea name="critism" placeholder="Express yourself" required  cols="20" rows="7"></textarea>
             </div>
             <div class="input">
                 <span>How would you deal with photographers making bad comments about you during photoshoot?</span>
-                <textarea name="response" placeholder="Express yourself" required  cols="20" rows="7"></textarea>
+                <textarea name="comments" placeholder="Express yourself" required  cols="20" rows="7"></textarea>
             </div>
             <div class="input">
                 <span>Why do you want to join TMA?</span>
-                <textarea name="response" placeholder="Express yourself" required  cols="20" rows="7"></textarea>
+                <textarea name="why" placeholder="Express yourself" required  cols="20" rows="7"></textarea>
             </div>
             <div class="input">
                 <span>What is unique and special about you?</span>
-                <textarea name="response" placeholder="Express yourself" required  cols="20" rows="7"></textarea>
+                <textarea name="unique" placeholder="Express yourself" required  cols="20" rows="7"></textarea>
             </div>
             <div class="input">
                 <span>What makes you best of the best?</span>
-                <textarea name="response" placeholder="Express yourself" required  cols="20" rows="7"></textarea>
+                <textarea name="speciality" placeholder="Express yourself" required  cols="20" rows="7"></textarea>
             </div>
 
             <div class="input">
                 <span>If yes, name the Agency?</span>
-                <input type="text" name="agency" placeholder="Type here..." required>
+                <input type="text" name="name_of_agency" placeholder="Type here..." required>
             </div>
             <div class="input">
                 <span>Do you have any piercing?</span>
@@ -432,7 +432,7 @@
             </div>
             <div class="input">
                 <span>Whats your weekly schedule like?</span>
-                <select  name="weekly" style="width:100%">
+                <select  name="schedule" style="width:100%">
                     <option value="">--select option--</option>
                     <option value="free alldays">Free All Days</option>
                     <option value="free weekdys">Free WeekDays</option>
@@ -450,7 +450,7 @@
             </div>
             <div class="input">
                 <span>Are you prepared to travel to modelling assignments?</span>
-                <select  name="assignments" style="width:100%">
+                <select  name="travelling" style="width:100%">
                     <option value="">--select option--</option>
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
@@ -483,7 +483,7 @@
             </div>
             <div class="input">
                 <span>How active are you on Instagram?</span>
-                <select  name="piercing" style="width:100%">
+                <select  name="active" style="width:100%">
                     <option value="">--select option--</option>
                     <option value="Daily">Daily</option>
                     <option value="Once a week">Once a week</option>
@@ -495,7 +495,7 @@
             </div>
             <div class="input">
                 <span>How active are you on whatsapp?</span>
-                <select  name="piercing" style="width:100%">
+                <select  name="whatsapp" style="width:100%">
                     <option value="">--select option--</option>
                     <option value="Daily">Daily</option>
                     <option value="Once a week">Once a week</option>
@@ -507,7 +507,7 @@
             </div>
             <div class="input">
                 <span>How do you rate your confidence?</span>
-                <select  name="rate" style="width:100%">
+                <select  name="confidence" style="width:100%">
                     <option value="">--select option--</option>
                     <option value="0">0</option>
                     <option value="1">1</option>
@@ -567,7 +567,7 @@
             </div>
             <div class="input">
                 <span>I have read and accept application process and agency terms?</span>
-                <select  name="relationship" style="width:100%">
+                <select  name="terms" style="width:100%">
                     <option value="">--select option--</option>
                     <option value="yes">Yes</option>
                </select>
@@ -581,6 +581,13 @@
         </section>
 
     @include('user.footer')
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        @if(session()->has('success'))
+        <script>
+            swal("Application submitted successfully","Done","success");
+        </script>
+        @endif
 
     <script src="js/manyatta.js"></script>
     <script src="js/swiper.js"></script>

@@ -207,7 +207,7 @@
             <input type="text"name="address" required placeholder="Enter your address" >
         </div>
         <div class="input">
-            <span>address</span>
+            <span>subject</span>
             <select  name="subject">
                 <option value="">--select option--</option>
                 <option value="Query">Query</option>

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon.png">
@@ -29,13 +29,24 @@
   @include('admin.sidenav')
 
   <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
-    
+    <div class="container-fluid py-1 px-3">
+        @if (Session::has('success'))
+            <div class="alert alert-success">
+                {{ Session::get('success') }}
+            </div>
+
+        @endif
+    </div>
+
+    <?php session()->forget('sucess'); ?>
     <!-- Navbar -->
    @include('admin.navbar')
     <!-- End Navbar -->
-    
+
+    @yield('content')
+
   </main>
-  
+
   <!--   Core JS Files   -->
   <script src="js/core/popper.min.js"></script>
   <script src="js/core/bootstrap.min.js"></script>
@@ -49,7 +60,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-  
+
   <!-- Github buttons -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->

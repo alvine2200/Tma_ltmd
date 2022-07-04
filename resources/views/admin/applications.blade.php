@@ -2,7 +2,7 @@
 @section('content')
     <div class="container-fluid py-1 px-3">
         @if (Session::has('success'))
-        <div class="alert alert-succes">
+        <div class="alert alert-success alert-dismissible fade show">
             {{ Session::get('success') }}
         </div>            
         @endif
@@ -35,7 +35,7 @@
                     <td>{{ $apply->gender }}</td>
                     <td>{{ $apply->about_yourself }}</td>
                     <td>
-                        <a href="#" class="btn btn-primary">View</a>|
+                        <a href="{{url('view_applications',$apply->id)}}" class="btn btn-primary">View</a>|
                         <a href="{{url('admit',$apply->id)}}" class="btn btn-info">Approve</a>|
                         <a href="{{url('destroy',$apply->id)}}" onclick="return confirm('Are you sure you want to delete this application?')" class="btn btn-danger">delete</a>
                     </td>

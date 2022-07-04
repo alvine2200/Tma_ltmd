@@ -35,7 +35,8 @@ Route::get('/login',[AdminController::class,'login_admin']);
 Route::any('/verify_user',[AdminController::class,'login_logic']);
 Route::get('/end',[AdminController::class,'logout_admin']);
 Route::any('check',[AdminController::class,'check_applications']);
-Route::delete('destroy/{id}',[AdminController::class,'delete_application']);
-Route::put('admit/{id}',[AdminController::class,'approve_application']);
+Route::any('destroy/{id}',[AdminController::class,'delete_application']);
+Route::any('admit/{id}',[AdminController::class,'approve_application']);
+Route::any('view_applications/{id}',[AdminController::class,'view_application']);
 
 

@@ -48,9 +48,33 @@ class ModelsController extends Controller
         $input = $request->all();
         $readyinput=collect($input)->except('headshot', 'fullbody', 'sideway','_token')->all();
 
-        $readyinput['sideway'] = $request->file('sideway')->store('sideway');
-        $readyinput['fullbody'] = $request->file('fullbody')->store('fullbody');
-        $readyinput['headshot'] = $request->file('headshot')->store('headshot');
+        if ($request->hasfile('headshot')) {
+            $file = $request->file('headshot');
+            $extension = $file->getClientOriginalExtension(); // getting image extension
+            $headshot = time() . '.' . $extension;
+            $file->move('uploads/photos/', $headshot);
+            $readyinput['headshot'] = $headshot;
+
+        }
+
+
+        if ($request->hasfile('fullbody')) {
+            $file = $request->file('fullbody');
+            $extension = $file->getClientOriginalExtension(); // getting image extension
+            $fullbody = time() . '.' . $extension;
+            $file->move('uploads/photos/', $fullbody);
+            $readyinput['fullbody'] = $fullbody;
+
+        }
+
+        if ($request->hasfile('sideway')) {
+            $file = $request->file('sideway');
+            $extension = $file->getClientOriginalExtension(); // getting image extension
+            $sideway = time() . '.' . $extension;
+            $file->move('uploads/photos/', $sideway);
+            $readyinput['sideway'] = $sideway;
+            
+        }       
 
         $application::firstOrCreate($readyinput);
 

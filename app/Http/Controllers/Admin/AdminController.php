@@ -30,13 +30,13 @@ class AdminController extends Controller
         Auth::login($user);
 
         return redirect('admin_dashboard')->with('success','Welcome to Admin Dashboard'.$user->name);
-       }       
+       }
        else
        {
         return redirect('/login')->withErrors('fail','403!, Not Authorized to access admin dashboard');
        }
 
-    }   
+    }
 
     public function logout_admin()
     {
@@ -44,7 +44,7 @@ class AdminController extends Controller
         Auth::logout($user);
 
         return redirect('/login');
-    } 
+    }
 
     public function signup()
     {
@@ -58,20 +58,29 @@ class AdminController extends Controller
         return view('admin.applications',compact('user'));
     }
 
-    public function delete_applications(Application $application,$id)
+    public function delete_application(Application $application,$id)
     {
-        $application->delete($id);
+        $application::find($id)->delete();
         return back()->with('deleted','Application Deleted successfully');
     }
 
     public function approve_application(Application $application,$id)
     {
-        $application=Application::find($id);
-        $application->update([
-            'status'=>'approved',
-        ]);
+        $update=Application::find($id);
+        $update->status='Approved';
+        $update->update();
+       // $application::updateOrCreate([
+         //   'status'=>'approved',
+       // ]);
 
         return back()->with('success','Approved successfully');
+    }
+
+    public function view_application($id)
+    {
+        $application=Application::find($id);
+
+        return view('admin.viewapplication',compact('application'));
     }
 
 }

@@ -69,11 +69,27 @@ class AdminController extends Controller
         $update=Application::find($id);
         $update->status='Approved';
         $update->update();
-       // $application::updateOrCreate([
-         //   'status'=>'approved',
-       // ]);
 
         return back()->with('success','Approved successfully');
+    }
+
+    public function approve($id)
+    {
+        $update=Application::find($id);
+        $update->status='Approved';
+        $update->update();
+
+        return back()->with('success','Approved successfully');
+
+    }
+    public function disapprove($id)
+    {
+        $update=Application::find($id);
+        $update->status='pending';
+        $update->update();
+
+        return back()->with('success','Disaproved successfully');
+
     }
 
     public function view_application($id)

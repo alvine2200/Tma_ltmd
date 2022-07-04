@@ -37,6 +37,8 @@ Route::get('/end',[AdminController::class,'logout_admin']);
 Route::any('check',[AdminController::class,'check_applications']);
 Route::any('destroy/{id}',[AdminController::class,'delete_application']);
 Route::any('admit/{id}',[AdminController::class,'approve_application']);
+Route::any('approve/{id}',[AdminController::class,'approve']);
+Route::any('disapprove/{id}',[AdminController::class,'disapprove']);
 Route::any('view_applications/{id}',[AdminController::class,'view_application']);
 
 

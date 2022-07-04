@@ -3,6 +3,18 @@
 
 <div class="container-fluid py-1 px-3">
     <div class="row">
+        <div  class="col-md-6 ">
+            <a class="btn btn-info" onclick="return confirm('Are you sure you want to admit' . $application->fullname)" href="{{url('approve',$application->id)}}">Approve Application</a>
+        </div>
+        <div  class="col-md-6 ">
+            <a class="btn btn-primary"  href="{{url('disapprove',$application->id)}}">Disapprove Application</a>
+        </div>
+        <div class="col-md-6">
+            Application Status
+        </div>
+        <div class="col-md-6">
+            {{$application->status}}
+        </div>
         <div class="col-md-6">
             Fullname
         </div>

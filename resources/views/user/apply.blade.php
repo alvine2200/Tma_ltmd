@@ -122,18 +122,18 @@
                 <span>Complexion</span>
                 <select style="width:100% !Important;" name="complexion" id="complexion">
                     <option>--Select Option--</option>
-                    <option value="Male">Very dark</option>
-                    <option value="Female">dark</option>
-                    <option value="other">Chocolate</option>
+                    <option value="Very dark">Very dark</option>
+                    <option value="dark">dark</option>
+                    <option value="Chocolate">Chocolate</option>
                 </select>
             </div>
             <div class="input">
                 <span>What is your Shoe Size?</span>
                 <select style="width:100% !Important;" name="shoe" id="shoe">
                     <option>--Select Option--</option>
-                    <option value="Male">20</option>
-                    <option value="Female">30</option>
-                    <option value="other">50</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                    <option value="50">50</option>
                 </select>
             </div>
             <div class="input">
@@ -160,9 +160,9 @@
                 <span>When last did you take measurements?</span>
                 <select style="width:100% !Important;" name="measurement_time" id="shoe">
                     <option>--Select Option--</option>
-                    <option value="Male">This Week</option>
-                    <option value="Female">This Month</option>
-                    <option value="other">This Year</option>
+                    <option value="This week">This Week</option>
+                    <option value="This month">This Month</option>
+                    <option value="This year">This Year</option>
                 </select>
             </div>
          </div>
@@ -415,7 +415,7 @@
                </select>
             </div>
             <div class="input">
-                <span>Do you work?</span>
+                <span>Are you work?</span>
                 <select  name="work" style="width:100%">
                     <option value="">--select option--</option>
                     <option value="yes">Yes</option>
@@ -423,7 +423,7 @@
                </select>
             </div>
             <div class="input">
-                <span>Are you currently studying?</span>
+                <span>Are you studying?</span>
                 <select  name="studying" style="width:100%">
                     <option value="">--select option--</option>
                     <option value="yes">Yes</option>

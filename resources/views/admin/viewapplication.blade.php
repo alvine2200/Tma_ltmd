@@ -178,25 +178,25 @@
             {{$application->casual}}
         </div>
         <div class="col-md-6">
-            Do you work out?
+            Do you work out regularly?
         </div>
         <div class="col-md-6">
             {{$application->workout}}
         </div>
         <div class="col-md-6">
-            Can you be accept to be enroled in fitness training?
+            Can you be accept to be enrolled in fitness program?
         </div>
         <div class="col-md-6">
             {{$application->fitness}}
         </div>
         <div class="col-md-6">
-            Can you do nude shoot?
+            Would you do nude modelling?
         </div>
         <div class="col-md-6">
             {{$application->nude}}
         </div>
         <div class="col-md-6">
-            Can you do swimsuit photo shoot?
+            Would you do swimsuit/Lingerie modelling and why?
         </div>
         <div class="col-md-6">
             {{$application->swimsuit}}
@@ -208,25 +208,25 @@
             {{$application->fiveyears}}
         </div>
         <div class="col-md-6">
-            ********
+            Who is your favourite model artist and why?
         </div>
         <div class="col-md-6">
             {{$application->favourite}}
         </div>
         <div class="col-md-6">
-            **
+            What are the best four physical features that you have and why?
         </div>
         <div class="col-md-6">
             {{$application->physique}}
         </div>
         <div class="col-md-6">
-            Ever done casual photo shoot?
+            Explain reasons for above response?
         </div>
         <div class="col-md-6">
             {{$application->response}}
         </div>
         <div class="col-md-6">
-            Do you work out
+            What can you not do in modelling and why?
         </div>
         <div class="col-md-6">
             {{$application->activities}}
@@ -238,7 +238,7 @@
             {{$application->prepare}}
         </div>
         <div class="col-md-6">
-            How can you react when your director aint good during a photo shoot?
+            How can you react when your director doesnt direct well?
         </div>
         <div class="col-md-6">
             {{$application->director}}
@@ -256,211 +256,211 @@
             {{$application->give_up}}
         </div>
         <div class="col-md-6">
-            Can you be accept to be enroled in fitness training?
+            Describe your shoot experience?
         </div>
         <div class="col-md-6">
             {{$application->describe_shoot}}
         </div>
         <div class="col-md-6">
-            Can you do nude shoot?
+            Tell us about yourself?
         </div>
         <div class="col-md-6">
             {{$application->about_yourself}}
         </div>
         <div class="col-md-6">
-            Ever done casual photo shoot?
+            What is your greatest weakness as a person, why?
         </div>
         <div class="col-md-6">
             {{$application->weakness}}
         </div>
         <div class="col-md-6">
-            How do you overcome your weakness?
+            How do you work to overcome your weakness?
         </div>
         <div class="col-md-6">
             {{$application->overcome}}
         </div>
         <div class="col-md-6">
-            How confident are you if your skin is shown
+            How confortable are you showing your skin and why?
         </div>
         <div class="col-md-6">
             {{$application->skin_show}}
         </div>
         <div class="col-md-6">
-            Can you do nude shoot?
+            What are the 4 best personality trait?
         </div>
         <div class="col-md-6">
             {{$application->personalities}}
         </div>
         <div class="col-md-6">
-            Ever done casual photo shoot?
+            How well do you communicate with others?
         </div>
         <div class="col-md-6">
             {{$application->communication}}
         </div>
         <div class="col-md-6">
-            Do you work out
+            How would you deal with arrogant client?
         </div>
         <div class="col-md-6">
             {{$application->arrogancy}}
         </div>
         <div class="col-md-6">
-            Can you be accept to be enroled in fitness training?
+            Do you have any experience with critism, How did you handle it?
         </div>
         <div class="col-md-6">
             {{$application->critism}}
         </div>
         <div class="col-md-6">
-            Can you do nude shoot?
+            How would you deal with photographer making bad comments about you during photoshoot?
         </div>
         <div class="col-md-6">
             {{$application->comments}}
         </div>
         <div class="col-md-6">
-            Ever done casual photo shoot?
+            Why do you want to join TMA?
         </div>
         <div class="col-md-6">
             {{$application->why}}
         </div>
         <div class="col-md-6">
-            Do you work out
+            What is unique and special about you?
         </div>
         <div class="col-md-6">
             {{$application->unique}}
         </div>
         <div class="col-md-6">
-            Can you be accept to be enroled in fitness training?
+            What makes you the best?
         </div>
         <div class="col-md-6">
             {{$application->speciality}}
         </div>
         <div class="col-md-6">
-            Can you do nude shoot?
+            If yes, name of the agency?
         </div>
         <div class="col-md-6">
             {{$application->name_of_agency}}
         </div>
         <div class="col-md-6">
-            Can you be accept to be enroled in fitness training?
+            Do you have any piercing?
         </div>
         <div class="col-md-6">
             {{$application->piercing}}
         </div>
         <div class="col-md-6">
-            Can you do nude shoot?
+            Do you have any tatoos?
         </div>
         <div class="col-md-6">
             {{$application->tatoos}}
         </div>
         <div class="col-md-6">
-            Can you be accept to be enroled in fitness training?
+            Do you have any scars?
         </div>
         <div class="col-md-6">
             {{$application->scars}}
         </div>
         <div class="col-md-6">
-            Can you do nude shoot?
+            Have you had any enhancement?
         </div>
         <div class="col-md-6">
             {{$application->enhancement}}
         </div>
         <div class="col-md-6">
-            Can you be accept to be enroled in fitness training?
+            Are you open to have a manager?
         </div>
         <div class="col-md-6">
             {{$application->manager}}
         </div>
         <div class="col-md-6">
-            Can you do nude shoot?
+            Do you work?
         </div>
         <div class="col-md-6">
             {{$application->work}}
         </div>
         <div class="col-md-6">
-            Can you be accept to be enroled in fitness training?
+            Are you studying?
         </div>
         <div class="col-md-6">
             {{$application->studying}}
         </div>
         <div class="col-md-6">
-            Can you do nude shoot?
+            Whats your weekly schedule like?
         </div>
         <div class="col-md-6">
             {{$application->schedule}}
         </div>
         <div class="col-md-6">
-            Can you be accept to be enroled in fitness training?
+            Are you available on a short notice?
         </div>
         <div class="col-md-6">
             {{$application->availability}}
         </div>
         <div class="col-md-6">
-            Can you do nude shoot?
+            Are you prepared to travel on modelling assignments?
         </div>
         <div class="col-md-6">
             {{$application->travelling}}
         </div>
         <div class="col-md-6">
-            how are you doing
+            Are you intrested on acting?
         </div>
         <div class="col-md-6">
             {{$application->acting}}
         </div>
         <div class="col-md-6">
-            how are you doing
+            Have you done any modelling training?
         </div>
         <div class="col-md-6">
             {{$application->training}}
         </div>
         <div class="col-md-6">
-            how are you doing
+            Are you in a relationship with anyone at TMA?
         </div>
         <div class="col-md-6">
             {{$application->relationship}}
         </div>
         <div class="col-md-6">
-            how are you doing
+            How active are you on instagram?
         </div>
         <div class="col-md-6">
             {{$application->active}}
         </div>
         <div class="col-md-6">
-            how are you doing
+            How active are you on whatsapp?
         </div>
         <div class="col-md-6">
             {{$application->whatsapp}}
         </div>
         <div class="col-md-6">
-            how are you doing
+            How would you rate your confidence?
         </div>
         <div class="col-md-6">
             {{$application->confidence}}
         </div>
         <div class="col-md-6">
-            Can you do nude shoot?
+            Are you registered with any modelling agency, Name it?
         </div>
         <div class="col-md-6">
             {{$application->registered}}
         </div>
         <div class="col-md-6">
-            Can you be accept to be enroled in fitness training?
+            Will you manage to visit agency for review and<br> orientation for the first 2 weeks if accepted?
         </div>
         <div class="col-md-6">
             {{$application->review}}
         </div>
         <div class="col-md-6">
-            Can you do nude shoot?
+            Will you manage to pay agency fee of 1500/-  within first week if accepted?
         </div>
         <div class="col-md-6">
             {{$application->fee}}
         </div>
         <div class="col-md-6">
-            Can you be accept to be enroled in fitness training?
+            Will you manage to commit to a contract of 1 year if accepted?
         </div>
         <div class="col-md-6">
             {{$application->contract}}
         </div>
         <div class="col-md-6">
-            Can you do nude shoot?
+            I have read and accept application and agency terms?
         </div>
         <div class="col-md-6">
             {{$application->terms}}

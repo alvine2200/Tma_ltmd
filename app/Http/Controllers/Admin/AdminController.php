@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\User;
+use App\Models\Photo;
 use App\Models\Application;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 
 class AdminController extends Controller
 {
@@ -98,5 +100,79 @@ class AdminController extends Controller
 
         return view('admin.viewapplication',compact('application'));
     }
+
+    public function view_model()
+    {
+        $application=Application::where('status','approved')->paginate(15);
+
+        return view('admin.view_models')->with('application', $application)
+                                        ->with('success','All approved models fetched');
+    }
+    public function view_photo()
+    {
+        return view('admin.view_photos');
+    }
+
+    public function add_photo(Request $request)
+    {
+       $validator=Validator::make($request->all(),[
+            'photo' =>'mimes:jpg,png,jpeg,gif,svg|max:10240',
+            'fullname' =>'string',
+        ]);
+
+        if($validator->fails()) 
+        {
+            return back()->with('fail',$validator->errors());
+        }
+
+        $application=Application::where('fullname', $request->fullname)->first();
+
+        if(!$application)
+        {
+            return back()->with('fail','Fullname not found! kindly check and try again');
+        }
+        
+        if ($request->hasfile('photo')) {
+            $file = $request->file('photo');
+            $extension = $file->getClientOriginalExtension(); // getting image extension
+            $photo = time() . '.' . $extension;
+            $file->move('models/photos/', $photo);
+
+        }
+
+        Photo::firstOrCreate([
+            'fullname' => $application->fullname,
+            'photo' => $photo
+        ]);
+
+        return back()->with('success','Photo Added successfully');
+
+        
+    }
+
+    public function view_photo_table()
+    {
+        $photos=Photo::paginate(15);
+
+        return view('admin.view_photos_table')->with('photos',$photos);
+    }
+
+    public function destroy_photo($id)
+    {
+        $photo=Photo::find($id);
+
+        $photo->delete();
+
+        return back()->with('success','Photo successfully deleted');
+    }
+
+    public function models_photo($id)
+    {
+        $photos=Photo::find($id);
+
+        return view('admin.model',compact('photos'));
+
+    }
+
 
 }

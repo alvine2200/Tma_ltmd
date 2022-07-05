@@ -2,7 +2,8 @@
 @section('content')
 
 <div class="container-fluid py-1 px-3">
-    <div class="row">
+    <p><a class="btn btn-primary float-left" href="#">Back</a></p>
+    <div class="row pt-5">
         <div  class="col-md-6 ">
             <a class="btn btn-info" onclick="return confirm('Are you sure you want to admit' . $application->fullname)" href="{{url('approve',$application->id)}}">Approve Application</a>
         </div>

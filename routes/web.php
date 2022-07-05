@@ -40,5 +40,11 @@ Route::any('admit/{id}',[AdminController::class,'approve_application']);
 Route::any('approve/{id}',[AdminController::class,'approve']);
 Route::any('disapprove/{id}',[AdminController::class,'disapprove']);
 Route::any('view_applications/{id}',[AdminController::class,'view_application']);
+Route::any('view_models',[AdminController::class,'view_model']);
+Route::any('view_photos/{id}',[AdminController::class,'view_photo']);
+Route::any('photos',[AdminController::class,'view_photo_table']);
+Route::any('add_photos',[AdminController::class,'add_photo']);
+Route::any('destroy_photos/{id}',[AdminController::class,'destroy_photo']);
+Route::any('model_photos/{id}',[AdminController::class,'models_photo']);
 
 

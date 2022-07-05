@@ -104,36 +104,36 @@
                 <span>What is your Eye Color?</span>
                 <select style="width:100% !Important;" name="eye" id="eye">
                     <option>--Select Option--</option>
-                    <option value="blue">blue</option>
-                    <option value="grey">grey</option>
-                    <option value="grey-blue">grey-blue...</option>
+                    @foreach ($eyecolors=App\Models\EyeColor::orderby('name','asc')->get() as $eyecolor)
+                      <option>{{$eyecolor->name}}</option>  
+                    @endforeach
                 </select>
             </div>
             <div class="input">
                 <span>What is your Hair Color?</span>
                 <select style="width:100% !Important;" name="hair" id="hair">
                     <option>--Select Option--</option>
-                    <option value="blue">blue</option>
-                    <option value="Female">grey</option>
-                    <option value="other">grey-blue...</option>
+                    @foreach ($hairs=App\Models\HairColor::orderby('name','asc') as $hair)
+                        <option>{{$hair->name}}</option>
+                    @endforeach
                 </select>
             </div>
             <div class="input">
                 <span>Complexion</span>
                 <select style="width:100% !Important;" name="complexion" id="complexion">
                     <option>--Select Option--</option>
-                    <option value="Very dark">Very dark</option>
-                    <option value="dark">dark</option>
-                    <option value="Chocolate">Chocolate</option>
+                    @foreach ($complexions=App\Models\Complexion::orderby('name','asc') as $complexion)
+                        <option>{{$complexion->name}}</option>
+                    @endforeach
                 </select>
             </div>
             <div class="input">
                 <span>What is your Shoe Size?</span>
                 <select style="width:100% !Important;" name="shoe" id="shoe">
                     <option>--Select Option--</option>
-                    <option value="20">20</option>
-                    <option value="30">30</option>
-                    <option value="50">50</option>
+                    @foreach ($shoes=App\Models\ShoeSize::orderby('name','asc') as $shoe)
+                        <option>{{$shoe->name}}</option>
+                    @endforeach
                 </select>
             </div>
             <div class="input">
@@ -150,19 +150,19 @@
             </div>
             <div class="input">
                 <span>Burst/Chest (Inches)</span>
-                <input type="text" name="burst" required placeholder="Enter here ...." >
+                <input type="number" name="burst" required placeholder="Enter here ...." >
             </div>
             <div class="input">
                 <span>Height</span>
-                <input type="text" name="height" required placeholder="Enter here ...." >
+                <input type="number" name="height" required placeholder="Enter here ...." >
             </div>
             <div class="input">
                 <span>When last did you take measurements?</span>
                 <select style="width:100% !Important;" name="measurement_time" id="shoe">
                     <option>--Select Option--</option>
-                    <option value="This week">This Week</option>
-                    <option value="This month">This Month</option>
-                    <option value="This year">This Year</option>
+                    @foreach ($times=App\Models\Time_Measurement::orderby('name','asc') as $time)
+                        <option>{{$time->name}}</option>
+                    @endforeach
                 </select>
             </div>
          </div>

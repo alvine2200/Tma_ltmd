@@ -6,6 +6,7 @@
         </p>
         <div style="justify-content:center; align-item:center" class="row col-md-8 mx-auto mt-3 d-flex">
             <div class="card mx-auto">
+                
                 <div class="card-header text-center mt-3 mb-3">
                         Add Model's photos
                 </div>

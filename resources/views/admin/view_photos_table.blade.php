@@ -18,7 +18,8 @@
                     <th scope="row">{{$apply->id}}</th>
                     <td>{{ $apply->fullname }}</td>
                     <td>
-                      <img style="width:350px; height:300px;" src="models/photos/{{ $apply->photo}}" alt="images">
+                      <img style="width:350px; height:300px; border-radius:10px; box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;"
+                       src="models/photos/{{ $apply->photo}}" alt="images">
                     </td>                   
                     <td>
                         <a href="{{url('model_photos',$apply->id)}}" class="btn btn-primary">View</a>|

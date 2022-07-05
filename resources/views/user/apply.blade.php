@@ -113,7 +113,7 @@
                 <span>What is your Hair Color?</span>
                 <select style="width:100% !Important;" name="hair" id="hair">
                     <option>--Select Option--</option>
-                    @foreach ($hairs=App\Models\HairColor::orderby('name','asc') as $hair)
+                    @foreach ($hairs=App\Models\HairColor::orderby('name','asc')->get() as $hair)
                         <option>{{$hair->name}}</option>
                     @endforeach
                 </select>
@@ -122,7 +122,7 @@
                 <span>Complexion</span>
                 <select style="width:100% !Important;" name="complexion" id="complexion">
                     <option>--Select Option--</option>
-                    @foreach ($complexions=App\Models\Complexion::orderby('name','asc') as $complexion)
+                    @foreach ($complexions=App\Models\Complexion::orderby('name','asc')->get() as $complexion)
                         <option>{{$complexion->name}}</option>
                     @endforeach
                 </select>
@@ -131,7 +131,7 @@
                 <span>What is your Shoe Size?</span>
                 <select style="width:100% !Important;" name="shoe" id="shoe">
                     <option>--Select Option--</option>
-                    @foreach ($shoes=App\Models\ShoeSize::orderby('name','asc') as $shoe)
+                    @foreach ($shoes=App\Models\ShoeSize::orderby('name','asc')->get() as $shoe)
                         <option>{{$shoe->name}}</option>
                     @endforeach
                 </select>
@@ -160,7 +160,7 @@
                 <span>When last did you take measurements?</span>
                 <select style="width:100% !Important;" name="measurement_time" id="shoe">
                     <option>--Select Option--</option>
-                    @foreach ($times=App\Models\Time_Measurement::orderby('name','asc') as $time)
+                    @foreach ($times=App\Models\Time_Measurement::orderby('name','asc')->get() as $time)
                         <option>{{$time->name}}</option>
                     @endforeach
                 </select>

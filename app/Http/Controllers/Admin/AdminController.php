@@ -31,11 +31,11 @@ class AdminController extends Controller
         $user=auth()->user();
         Auth::login($user);
 
-        return redirect('admin_dashboard')->with('success','Welcome to Admin Dashboard'.$user->name);
+        return redirect('admin_dashboard')->with('success','Welcome to Admin Dashboard',''.$user->name);
        }
        else
        {
-        return redirect('/login')->withErrors('fail','403!, Not Authorized to access admin dashboard');
+        return redirect('/login')->with('fail','403! Not Authorized to access admin dashboard');
        }
 
     }
@@ -120,7 +120,7 @@ class AdminController extends Controller
             'fullname' =>'string',
         ]);
 
-        if($validator->fails()) 
+        if($validator->fails())
         {
             return back()->with('fail',$validator->errors());
         }
@@ -131,7 +131,7 @@ class AdminController extends Controller
         {
             return back()->with('fail','Fullname not found! kindly check and try again');
         }
-        
+
         if ($request->hasfile('photo')) {
             $file = $request->file('photo');
             $extension = $file->getClientOriginalExtension(); // getting image extension
@@ -147,7 +147,7 @@ class AdminController extends Controller
 
         return back()->with('success','Photo Added successfully');
 
-        
+
     }
 
     public function view_photo_table()

@@ -15,7 +15,7 @@ class ComplexionSeeder extends Seeder
      */
     public function run()
     {
-        Complexion::upsert([
+        Complexion::insert([
             ['name'=>'Very Dark'],
             ['name'=>'Dark'],
             ['name'=>'Dark Chocolate'],
@@ -23,9 +23,9 @@ class ComplexionSeeder extends Seeder
             ['name'=>'light'],
             ['name'=>'Very light'],
         ],
-        
+
         ['name']);
 
-        
+
     }
 }

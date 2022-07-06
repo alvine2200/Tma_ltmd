@@ -79,7 +79,7 @@
             }
         }
 
-        
+
             .image-container{
                 justify-content: center;
                 align-items: center;

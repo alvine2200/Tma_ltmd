@@ -10,7 +10,7 @@ use App\Http\Requests\Applicationrequest;
 
 class ModelsController extends Controller
 {
-    public function models()
+    public function model_view()
     {
         return view ('user.models');
     }
@@ -73,17 +73,13 @@ class ModelsController extends Controller
             $sideway = time() . '.' . $extension;
             $file->move('uploads/photos/', $sideway);
             $readyinput['sideway'] = $sideway;
-            
-        }       
+
+        }
 
         $application::firstOrCreate($readyinput);
 
         return back()->with('success','Form submitted successfully');
 
     }
-
-
-
-
 
 }

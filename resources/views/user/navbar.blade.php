@@ -16,15 +16,15 @@
                 {{Session::get('success')}}
             </div>
         @endif
-        
+
         <span class="error">
             @if ($errors->any())
             <div style="margin-left:50px; font-size:16px; color:red;"  class="alert alert-danger">
-                
+
                     @foreach ($errors->all() as $message)
                         <span style="color:red">{{ $message }}, Not submitted</span>
                     @endforeach
-                
+
             </div>
            @endif
        </span>

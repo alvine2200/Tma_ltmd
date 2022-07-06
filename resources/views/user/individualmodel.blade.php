@@ -152,12 +152,7 @@
               <div class="swiper-slide">
                 <img src="images/model2.jpg" class="img-responsive" alt="img"/>
               </div>
-              <div class="swiper-slide">
-                <img src="images/model1.jpg" class="img-responsive" alt="img"/>
-            </div>
-              <div class="swiper-slide">
-                <img src="images/model2.jpg" class="img-responsive" alt="img"/>
-            </div>
+              
 
         </div>
             <!-- If we need pagination -->

@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Photo;
 use App\Models\Contact;
 use App\Models\Application;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Http\Requests\Storerequest;
 use App\Http\Requests\Applicationrequest;
 
@@ -12,11 +14,14 @@ class ModelsController extends Controller
 {
     public function model_view()
     {
-        return view ('user.models');
+        $models=Photo::all();
+        return view ('user.models',compact('models'));
     }
 
-    public function individual()
+
+    public function individual(Request $request)
     {
+        
         return view ('user.individualmodel');
     }
 
@@ -50,8 +55,8 @@ class ModelsController extends Controller
 
         if ($request->hasfile('headshot')) {
             $file = $request->file('headshot');
-            $extension = $file->getClientOriginalExtension(); // getting image extension
-            $headshot = time() . '.' . $extension;
+            $extension =$file->getClientOriginalname(); // getting image extension
+            $headshot = uniqid() .  $extension;
             $file->move('uploads/photos/', $headshot);
             $readyinput['headshot'] = $headshot;
 
@@ -60,8 +65,8 @@ class ModelsController extends Controller
 
         if ($request->hasfile('fullbody')) {
             $file = $request->file('fullbody');
-            $extension = $file->getClientOriginalExtension(); // getting image extension
-            $fullbody = time() . '.' . $extension;
+            $extension=$file->getClientOriginalname(); // getting image extension
+            $fullbody = uniqid() . $extension;
             $file->move('uploads/photos/', $fullbody);
             $readyinput['fullbody'] = $fullbody;
 
@@ -69,8 +74,8 @@ class ModelsController extends Controller
 
         if ($request->hasfile('sideway')) {
             $file = $request->file('sideway');
-            $extension = $file->getClientOriginalExtension(); // getting image extension
-            $sideway = time() . '.' . $extension;
+            $extension = $extension =$file->getClientOriginalname();// getting image extension
+            $sideway = uniqid() . $extension;
             $file->move('uploads/photos/', $sideway);
             $readyinput['sideway'] = $sideway;
 

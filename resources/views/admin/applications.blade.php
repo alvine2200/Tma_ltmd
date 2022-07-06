@@ -8,7 +8,7 @@
         @endif
 
         <?php Session::forget('success') ?>
-        <p><a class="btn btn-primary float-start" href="#">Back</a></p>
+        <p><a class="btn btn-primary float-start" href="{{url()->previous()}}">Back</a></p>
         <table class="table table-bordered">
             <thead>
             <tr>

@@ -18,72 +18,19 @@
 
         <div style="padding-top:20rem;" class="flex-container">
             <div class="row">
-                <a href="{{ url('individual')}}"><div class="image">
-                    <img src="images/model2.jpg" class="img-responsive" alt="img">
-                   <div class="description">
-                      <span>
-                         <h3 style="font-size:20px !Important">Aleisha Amanda</h3>
-                      </span>
+                @foreach ($models as $model)
+                     <a href="{{ url('individual')}}"><div class="image">
+                            <img src="imagemodels/photos/{{ $model->photo}}" class="img-responsive" alt="img">
+                        <div class="description">
+                            <span>
+                                <h3 style="font-size:20px !Important">{{$model->fullname}}</h3>
+                            </span>
 
-                       <h4 style="font-size:13px !Important">Commercial Model</h4>
-                    </div>
-                </div>
-                </a>
-                <a href="{{ url('individual')}}"><div class="image">
-                    <img src="images/model2.jpg" class="img-responsive" alt="img">
-                   <div class="description">
-                      <span>
-                         <h3 style="font-size:20px !Important">Aleisha Amanda</h3>
-                      </span>
-
-                       <h4 style="font-size:13px !Important">Commercial Model</h4>
-                    </div>
-                </div>
-                </a>
-                <a href="{{ url('individual')}}"><div class="image">
-                    <img src="images/model2.jpg" class="img-responsive" alt="img">
-                   <div class="description">
-                      <span>
-                         <h3 style="font-size:20px !Important">Aleisha Amanda</h3>
-                      </span>
-
-                       <h4 style="font-size:13px !Important">Commercial Model</h4>
-                    </div>
-                </div>
-                </a>
-                <a href="{{ url('individual')}}"><div class="image">
-                    <img src="images/model2.jpg" class="img-responsive" alt="img">
-                   <div class="description">
-                      <span>
-                         <h3 style="font-size:20px !Important">Aleisha Amanda</h3>
-                      </span>
-
-                       <h4 style="font-size:13px !Important">Commercial Model</h4>
-                    </div>
-                </div>
-                </a>
-                <a href="{{ url('individual')}}"><div class="image">
-                    <img src="images/model2.jpg" class="img-responsive" alt="img">
-                   <div class="description">
-                      <span>
-                         <h3 style="font-size:20px !Important">Aleisha Amanda</h3>
-                      </span>
-
-                       <h4 style="font-size:13px !Important">Commercial Model</h4>
-                    </div>
-                </div>
-                </a>
-                <a href="{{ url('individual')}}"><div class="image">
-                    <img src="images/model2.jpg" class="img-responsive" alt="img">
-                   <div class="description">
-                      <span>
-                         <h3 style="font-size:20px !Important">Aleisha Amanda</h3>
-                      </span>
-
-                       <h4 style="font-size:13px !Important">Commercial Model</h4>
-                    </div>
-                </div>
-                </a>
+                            <h4 style="font-size:13px !Important">Commercial Model</h4>
+                            </div>
+                        </div>
+                        </a>
+                @endforeach               
 
             </div>
         </div>

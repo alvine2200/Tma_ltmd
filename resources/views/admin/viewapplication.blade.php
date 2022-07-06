@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="container-fluid py-1 px-3">
-    <p><a class="btn btn-primary float-left" href="#">Back</a></p>
+    <p><a class="btn btn-primary float-left" href="{{url()->previous()}}">Back</a></p>
     <div class="row pt-5">
         <div  class="col-md-6 ">
             <a class="btn btn-info" onclick="return confirm('Are you sure you want to admit' . $application->fullname)" href="{{url('approve',$application->id)}}">Approve Application</a>
@@ -128,19 +128,19 @@
             Headshot photo
         </div>
         <div class="col-md-6">
-            <img style="width:300px; margin:10px; height:250px;" src="uploads/photos/{{$application->headshot }}" alt="image" />           
+            <img style="width:500px; height:400px; border-radius:7px; object-fit: contain; width:100%;"  src="uploads/photos/{{$application->headshot }}" alt="image" />           
         </div>
         <div class="col-md-6">
             Fullbody Photo
         </div>
         <div class="col-md-6">
-            <img style="width:300px; margin:10px; height:250px;" src="uploads/photos/{{$application->fullbody }}" alt="image" />
+            <img style="width:500px; height:400px; border-radius:7px; object-fit: contain; width:100%;"  src="uploads/photos/{{$application->fullbody }}" alt="image" />
         </div>
         <div class="col-md-6">
             Sideway photo
         </div>
         <div class="col-md-6">
-            <img style="width:300px; margin:10px; height:250px;" src="uploads/photos/{{$application->headshot }}" alt="image" />
+            <img style="width:500px; height:400px; border-radius:7px; object-fit: contain; width:100%;"  src="uploads/photos/{{$application->headshot }}" alt="image" />
         </div>
         <div class="col-md-6">
             Experience

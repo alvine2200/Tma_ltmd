@@ -54,6 +54,17 @@
 					<img src="images/model2.jpg" alt="image">
 				</div>
 			</div>
+            <div class="swiper-slide slide">
+				<div class="content">
+					<span>Fashion And Modelling</span>
+					<h3>Thera Modelling Agency</h3>
+					<p> Welcome To TMA, a home to Fashion, Modelling and Videography.  <p>
+					<a href="#" class="btn">Contact Us</a>
+				</div>
+				<div class="image">
+					<img src="images/model11.jpg" alt="image">
+				</div>
+			</div>
 
 		</div>
 		   <div class="swiper-pagination"></div>
@@ -72,7 +83,7 @@
     <div  class="flex-container">
         <div class="row">
             <div class="image">
-                <img src="images/model2.jpg" class="img-responsive" alt="img">
+                <img src="images/model9.jpg" class="img-responsive" alt="img">
                <div class="description">
                   <span>
                      <h3 style="font-size:20px !Important">Aleisha Amanda</h3>
@@ -82,27 +93,7 @@
                 </div>
             </div>
             <div class="image">
-                <img src="images/chefs-02.jpg" class="img-responsive" alt="img">
-               <div class="description">
-                  <span>
-                     <h3 style="font-size:20px !Important">Aleisha Amanda</h3>
-                  </span>
-
-                   <h4 style="font-size:13px !Important">Commercial Model</h4>
-                </div>
-            </div>
-            <div class="image">
-                <img src="images/model2.jpg" class="img-responsive" alt="img">
-               <div class="description">
-                  <span>
-                     <h3 style="font-size:20px !Important">Aleisha Amanda</h3>
-                  </span>
-
-                   <h4 style="font-size:13px !Important">Commercial Model</h4>
-                </div>
-            </div>
-            <div class="image">
-                <img src="images/chefs-01.jpg" class="img-responsive" alt="img">
+                <img src="images/model6.jpg" class="img-responsive" alt="img">
                <div class="description">
                   <span>
                      <h3 style="font-size:20px !Important">Aleisha Amanda</h3>
@@ -122,7 +113,27 @@
                 </div>
             </div>
             <div class="image">
-                <img src="images/chefs-03.jpg" class="img-responsive" alt="img">
+                <img src="images/model5.jpg" class="img-responsive" alt="img">
+               <div class="description">
+                  <span>
+                     <h3 style="font-size:20px !Important">Aleisha Amanda</h3>
+                  </span>
+
+                   <h4 style="font-size:13px !Important">Commercial Model</h4>
+                </div>
+            </div>
+            <div class="image">
+                <img src="images/model11.jpg" class="img-responsive" alt="img">
+               <div class="description">
+                  <span>
+                     <h3 style="font-size:20px !Important">Aleisha Amanda</h3>
+                  </span>
+
+                   <h4 style="font-size:13px !Important">Commercial Model</h4>
+                </div>
+            </div>
+            <div class="image">
+                <img src="images/model10.jpg" class="img-responsive" alt="img">
                <div class="description">
                   <span>
                      <h3 style="font-size:20px !Important">Aleisha Amanda</h3>

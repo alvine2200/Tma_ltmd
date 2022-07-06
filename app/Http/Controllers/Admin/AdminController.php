@@ -116,7 +116,7 @@ class AdminController extends Controller
     public function add_photo(Request $request)
     {
        $validator=Validator::make($request->all(),[
-            'photo' =>'mimes:jpg,png,jpeg,gif,svg|max:10240',
+            'photo' =>'required|mimes:jpg,png,jpeg,gif,svg|max:10240',
             'fullname' =>'string',
         ]);
 
@@ -134,8 +134,8 @@ class AdminController extends Controller
 
         if ($request->hasfile('photo')) {
             $file = $request->file('photo');
-            $extension = $file->getClientOriginalExtension(); // getting image extension
-            $photo = time() . '.' . $extension;
+            $extension = $file->getClientOriginalname(); // getting image extension
+            $photo = uniqid() . $extension;
             $file->move('imagemodels/photos/', $photo);
 
         }

@@ -19,7 +19,7 @@
         <div style="padding-top:20rem;" class="flex-container">
             <div class="row">
                 <a href="{{ url('individual')}}"><div class="image">
-                    <img src="images/pic1.png" class="img-responsive" alt="img">
+                    <img src="images/model2.jpg" class="img-responsive" alt="img">
                    <div class="description">
                       <span>
                          <h3 style="font-size:20px !Important">Aleisha Amanda</h3>
@@ -30,7 +30,7 @@
                 </div>
                 </a>
                 <a href="{{ url('individual')}}"><div class="image">
-                    <img src="images/pic2.png" class="img-responsive" alt="img">
+                    <img src="images/model2.jpg" class="img-responsive" alt="img">
                    <div class="description">
                       <span>
                          <h3 style="font-size:20px !Important">Aleisha Amanda</h3>
@@ -41,7 +41,7 @@
                 </div>
                 </a>
                 <a href="{{ url('individual')}}"><div class="image">
-                    <img src="images/pic3.png" class="img-responsive" alt="img">
+                    <img src="images/model2.jpg" class="img-responsive" alt="img">
                    <div class="description">
                       <span>
                          <h3 style="font-size:20px !Important">Aleisha Amanda</h3>
@@ -52,7 +52,7 @@
                 </div>
                 </a>
                 <a href="{{ url('individual')}}"><div class="image">
-                    <img src="images/pic4.png" class="img-responsive" alt="img">
+                    <img src="images/model2.jpg" class="img-responsive" alt="img">
                    <div class="description">
                       <span>
                          <h3 style="font-size:20px !Important">Aleisha Amanda</h3>
@@ -63,7 +63,7 @@
                 </div>
                 </a>
                 <a href="{{ url('individual')}}"><div class="image">
-                    <img src="images/pic3.png" class="img-responsive" alt="img">
+                    <img src="images/model2.jpg" class="img-responsive" alt="img">
                    <div class="description">
                       <span>
                          <h3 style="font-size:20px !Important">Aleisha Amanda</h3>
@@ -74,7 +74,7 @@
                 </div>
                 </a>
                 <a href="{{ url('individual')}}"><div class="image">
-                    <img src="images/pic1.png" class="img-responsive" alt="img">
+                    <img src="images/model2.jpg" class="img-responsive" alt="img">
                    <div class="description">
                       <span>
                          <h3 style="font-size:20px !Important">Aleisha Amanda</h3>

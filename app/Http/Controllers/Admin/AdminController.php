@@ -136,7 +136,7 @@ class AdminController extends Controller
             $file = $request->file('photo');
             $extension = $file->getClientOriginalExtension(); // getting image extension
             $photo = time() . '.' . $extension;
-            $file->move('models/photos/', $photo);
+            $file->move('imagemodels/photos/', $photo);
 
         }
 

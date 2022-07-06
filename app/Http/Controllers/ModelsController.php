@@ -73,8 +73,8 @@ class ModelsController extends Controller
             $sideway = time() . '.' . $extension;
             $file->move('uploads/photos/', $sideway);
             $readyinput['sideway'] = $sideway;
-            
-        }       
+
+        }
 
         $application::firstOrCreate($readyinput);
 

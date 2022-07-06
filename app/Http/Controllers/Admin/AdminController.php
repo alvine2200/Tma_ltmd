@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Photo;
 use App\Models\Application;
 use Illuminate\Http\Request;
+use App\Models\ApprovedModel;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
@@ -18,7 +19,7 @@ class AdminController extends Controller
     }
 
     public function login_admin()
-    {
+    { 
         return view('admin.login');
     }
 
@@ -172,6 +173,32 @@ class AdminController extends Controller
 
         return view('admin.model',compact('photos'));
 
+    }
+
+    //start of crud models
+
+    public function add_model()
+    {
+        return view('admin.addmodel');
+    }
+
+    public function store_model(Request $request)
+    {
+        $input = $request->all();
+        $readyinput=collect($input)->except('photo','_token')->all();
+
+        if ($request->hasfile('photo')) {
+            $file = $request->file('photo');
+            $extension =$file->getClientOriginalname(); // getting image extension
+            $photo = uniqid() .  $extension;
+            $file->move('imagemodels/photos/', $photo);
+            $readyinput['photo'] = $photo;
+
+        }
+
+        ApprovedModel::firstOrCreate($readyinput);
+
+        return back()->with('success','New model added successfully');
     }
 
 

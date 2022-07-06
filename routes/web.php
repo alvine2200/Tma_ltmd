@@ -46,5 +46,6 @@ Route::any('photos',[AdminController::class,'view_photo_table']);
 Route::any('add_photos',[AdminController::class,'add_photo']);
 Route::any('destroy_photos/{id}',[AdminController::class,'destroy_photo']);
 Route::any('model_photos/{id}',[AdminController::class,'models_photo']);
-
+Route::any('add_models',[AdminController::class,'add_model']);
+Route::any('store_models',[AdminController::class,'store_model']);
 

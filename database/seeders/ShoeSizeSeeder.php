@@ -15,7 +15,7 @@ class ShoeSizeSeeder extends Seeder
      */
     public function run()
     {
-       ShoeSize::upsert([
+       ShoeSize::insert([
             ['name'=>'34'],
             ['name'=>'34.5'],
             ['name'=>'35'],

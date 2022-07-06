@@ -15,7 +15,7 @@ class EyeColorSeeder extends Seeder
      */
     public function run()
     {
-        EyeColor::upsert([
+        EyeColor::insert([
             ['name'=>'Amber'],
             ['name'=>'Black'],
             ['name'=>'Blue'],

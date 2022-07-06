@@ -15,7 +15,7 @@ class TimeMeasurementSeeder extends Seeder
      */
     public function run()
     {
-        Time_Measurement::upsert([
+        Time_Measurement::insert([
             ['name'=>'This week'],
             ['name'=>'This month'],
             ['name'=>'Three Months ago'],

@@ -23,7 +23,7 @@ Route::get('/', function () {
 
 Route::any('/',[HomeController::class,'index']);
 Route::any('/models',[ModelsController::class,'model_view']);
-Route::any('individual',[ModelsController::class,'individual']);
+Route::any('individual/{id}',[ModelsController::class,'individual']);
 Route::any('apply',[ModelsController::class,'apply']);
 Route::any('contact',[ModelsController::class,'contact']);
 Route::post('contact_form',[ModelsController::class,'contact_form']);
@@ -48,4 +48,7 @@ Route::any('destroy_photos/{id}',[AdminController::class,'destroy_photo']);
 Route::any('model_photos/{id}',[AdminController::class,'models_photo']);
 Route::any('add_models',[AdminController::class,'add_model']);
 Route::any('store_models',[AdminController::class,'store_model']);
+Route::any('edit_model/{id}',[AdminController::class,'edit']);
+Route::any('delete_model/{id}',[AdminController::class,'delete_model']);
+Route::any('update_model/{id}',[AdminController::class,'update_model']);
 

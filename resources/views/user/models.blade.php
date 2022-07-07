@@ -19,7 +19,7 @@
         <div style="padding-top:20rem;" class="flex-container">
             <div class="row">
                 @foreach ($models as $model)
-                     <a href="{{ url('individual')}}"><div class="image">
+                     <a href="{{ url('individual',$model->id)}}"><div class="image">
                             <img src="imagemodels/photos/{{ $model->photo}}" class="img-responsive" alt="img">
                         <div class="description">
                             <span>

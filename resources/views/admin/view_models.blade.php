@@ -14,31 +14,42 @@
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Full Name</th>
-                <th scope="col">Email</th>
-                <th scope="col">Phone</th>
-                <th scope="col">Location</th>
-                <th scope="col">status</th>
-                <th scope="col">Gender</th>
-                <th scope="col">About</th>
+                <th scope="col">Photo</th>
+                <th scope="col">Weight</th>
+                <th scope="col">Height</th>
+                <th scope="col">Hips</th>
+                <th scope="col">Burst/Chest</th>
+                <th scope="col">Shoe Size</th>
+                <th scope="col">Hair Color</th>
+                <th scope="col">Complexions</th>
+                <th scope="col">Category</th>
+                <th scope="col">Instagram</th>
+                <th scope="col">Tiktok</th>
+                <th scope="col">Experience</th>
                 <th scope="col">Options</th>
             </tr>
             </thead>
             <tbody>
-                @foreach ($application as $apply )
+                @foreach ($models as $apply )
 
                 <tr>
                     <th scope="row">{{$apply->id}}</th>
                     <td>{{ $apply->fullname }}</td>
-                    <td>{{ $apply->email }}</td>
-                    <td>{{ $apply->phone }}</td>
-                    <td>{{ $apply->location }}</td>
-                    <td>{{ $apply->status }}</td>
-                    <td>{{ $apply->gender }}</td>
-                    <td>{{ $apply->about_yourself }}</td>
+                    <td><img style="width: 100%; height:150px; width:250px; border-radius:7px" src="imagemodels/photos/{{$apply->photo}}"></td>
+                    <td>{{ $apply->weight }}</td>
+                    <td>{{ $apply->height }}</td>
+                    <td>{{ $apply->hips }}</td>
+                    <td>{{ $apply->burst_chest }}</td>
+                    <td>{{ $apply->shoe_size }}</td>
+                    <td>{{ $apply->hair_color }}</td>
+                    <td>{{ $apply->complexions }}</td>
+                    <td>{{ $apply->category }}</td>
+                    <td>{{ $apply->instagram }}</td>
+                    <td>{{ $apply->tiktok }}</td>
+                    <td>{{ $apply->experience }}</td>
                     <td>
-                        <a href="{{url('view_applications',$apply->id)}}" class="btn btn-primary">View</a>|
-                        <a href="{{url('view_photos',$apply->id)}}" class="btn btn-info">Add photos</a>|
-                        <a href="{{url('destroy',$apply->id)}}" onclick="return confirm('Are you sure you want to delete this application?')" class="btn btn-danger">delete</a>
+                        <a href="{{url('edit_model',$apply->id)}}" class="btn btn-primary">Edit</a>
+                        <a href="{{url('delete_model',$apply->id)}}" onclick="return confirm('Are you sure you want to delete this application?')" class="btn btn-danger">delete</a>
                     </td>
                 </tr>
 
@@ -46,7 +57,7 @@
             </tbody>
         </table>
 
-        {{ $application->links() }}
+        {{ $models->links() }}
 
 
      </div>

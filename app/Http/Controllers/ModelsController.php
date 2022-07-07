@@ -6,6 +6,7 @@ use App\Models\Photo;
 use App\Models\Contact;
 use App\Models\Application;
 use Illuminate\Http\Request;
+use App\Models\ApprovedModel;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\Storerequest;
 use App\Http\Requests\Applicationrequest;
@@ -14,15 +15,15 @@ class ModelsController extends Controller
 {
     public function model_view()
     {
-        $models=Photo::all();
+        $models=ApprovedModel::all();
         return view ('user.models',compact('models'));
     }
 
 
-    public function individual(Request $request)
+    public function individual(Request $request,$id)
     {
-        
-        return view ('user.individualmodel');
+        $models=ApprovedModel::find($id);
+        return view ('user.individualmodel',compact('models'));
     }
 
     public function apply()

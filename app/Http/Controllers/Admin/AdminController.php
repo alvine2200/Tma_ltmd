@@ -19,7 +19,7 @@ class AdminController extends Controller
     }
 
     public function login_admin()
-    { 
+    {
         return view('admin.login');
     }
 
@@ -102,13 +102,7 @@ class AdminController extends Controller
         return view('admin.viewapplication',compact('application'));
     }
 
-    public function view_model()
-    {
-        $application=Application::where('status','approved')->paginate(15);
 
-        return view('admin.view_models')->with('application', $application)
-                                        ->with('success','All approved models fetched');
-    }
     public function view_photo()
     {
         return view('admin.view_photos');
@@ -199,6 +193,50 @@ class AdminController extends Controller
         ApprovedModel::firstOrCreate($readyinput);
 
         return back()->with('success','New model added successfully');
+    }
+
+    public function view_model()
+    {
+        $models=ApprovedModel::paginate(15);
+        return view('admin.view_models')->with('models', $models)
+                                        ->with('success','All approved models fetched');
+    }
+
+    public function edit($id)
+    {
+        $models=ApprovedModel::find($id);
+        return view('admin.editmodel')->with('models', $models);
+    }
+
+    public function update_model(Request $request, $id)
+    {
+        $models=ApprovedModel::find($id);
+        $input = $request->all();
+        $readyinput=collect($input)->except('photo','_token','_method')->all();
+
+        if ($request->hasfile('photo')) {
+            $file = $request->file('photo');
+            $extension =$file->getClientOriginalname(); // getting image extension
+            $photo = uniqid() .  $extension;
+            $file->move('imagemodels/photos/', $photo);
+            $readyinput['photo'] = $photo;
+
+        }
+        elseif($request->hasfile('photo') == '' )
+        {
+            $readyinput['photo'] =$models->photo;
+        }
+
+        $models->update($readyinput);
+
+        return redirect('view_models')->with('success', 'Model details updated successfully');
+    }
+
+    public function delete_model($id)
+    {
+        $models=ApprovedModel::find($id);
+        $models->delete();
+        return back()->with('success', 'Model deleted successfully');
     }
 
 

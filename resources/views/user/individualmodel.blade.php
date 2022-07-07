@@ -2,6 +2,8 @@
 <html>
 <head>
 
+    <base href="/public">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -117,7 +119,7 @@
            
         <div class="row">            
               <div class="image">
-                  <img src="/imagemodels/photos/{{$models->photo}}" class="img-responsive" alt="img">
+                  <img style="max-width:450px;!important" src="/imagemodels/photos/{{$models->photo}}" class="img-responsive" alt="img">
               </div>
               <div class="appearance">
                 <span>

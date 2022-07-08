@@ -28,6 +28,7 @@ Route::any('apply',[ModelsController::class,'apply']);
 Route::any('contact',[ModelsController::class,'contact']);
 Route::post('contact_form',[ModelsController::class,'contact_form']);
 Route::post('application_form',[ModelsController::class,'application_form']);
+Route::any('models_index',[ModelsController::class,'model_index']);
 
 //admin begins
 Route::get('admin_dashboard',[AdminController::class,'admin_dashboard']);

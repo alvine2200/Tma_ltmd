@@ -105,7 +105,7 @@
                 <select style="width:100% !Important;" name="eye" id="eye">
                     <option>--Select Option--</option>
                     @foreach ($eyecolors=App\Models\EyeColor::orderby('name','asc')->get() as $eyecolor)
-                      <option>{{$eyecolor->name}}</option>  
+                      <option>{{$eyecolor->name}}</option>
                     @endforeach
                 </select>
             </div>

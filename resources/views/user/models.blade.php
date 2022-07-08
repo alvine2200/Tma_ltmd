@@ -26,11 +26,11 @@
                                 <h3 style="font-size:20px !Important">{{$model->fullname}}</h3>
                             </span>
 
-                            <h4 style="font-size:13px !Important">Commercial Model</h4>
+                            <h4 style="font-size:13px !Important">{{$model->category}}</h4>
                             </div>
                         </div>
                         </a>
-                @endforeach               
+                @endforeach
 
             </div>
         </div>

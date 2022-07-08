@@ -116,8 +116,8 @@
     @include('user.navbar');
 
  <div style="padding-top:18rem; padding-bottom:10px;" class="model-container">
-           
-        <div class="row">            
+
+        <div class="row">
               <div class="image">
                   <img style="max-width:450px;!important" src="/imagemodels/photos/{{$models->photo}}" class="img-responsive" alt="img">
               </div>
@@ -137,9 +137,9 @@
                     </h5>
 
                     <h5>Experience: {{$models->experience}}</h5>
-                </span> 
+                </span>
             </div>
-           
+
 
         </div>
 
@@ -154,7 +154,7 @@
               <div class="swiper-slide">
                 <img src="images/model2.jpg" class="img-responsive" alt="img"/>
               </div>
-              
+
 
         </div>
             <!-- If we need pagination -->

@@ -2,11 +2,11 @@
 @section('content')
 
 <div class="container-fluid py-1 px-3">
-
+    
     <div style="justify-content:center; align-item:center" class="row col-md-8 mx-auto mt-3 d-flex">
-
+        
         <div class="card mx-auto">
-
+            
             <div class="card-header text-center mt-3 mb-3">
                     ADD NEW MODEL
             </div>
@@ -40,8 +40,8 @@
                         <div class="form-group mb-3">
                             <label>Shoe Size</label>
                            <!-- <Input type="number" class="form-control" name="shoe_size"> -->
-                                <select style="width:100% !Important; height:40px; border-radius:7px; border:1px solid grey;" name="shoe" id="shoe">
-                                    <option>--Select Option--</option>
+                                <select  style="width:100% !Important; height:40px; border-radius:7px; border:1px solid grey;"  name="shoe_size" id="shoe">
+                                    <option>{{$models->shoe_size}}</option>
                                     @foreach ($shoes=App\Models\ShoeSize::orderby('name','asc')->get() as $shoe)
                                         <option>{{$shoe->name}}</option>
                                     @endforeach
@@ -50,8 +50,8 @@
                         <div class="form-group mb-3">
                             <label>Hair Color</label>
                             <!--<Input type="text" class="form-control" name="hair_color"> -->
-                                <select style="width:100% !Important; height:40px; border-radius:7px;" name="hair_color" id="hair_color">
-                                    <option>--Select Option--</option>
+                                <select  style="width:100% !Important; height:40px; border-radius:7px;" name="hair_color" id="hair_color">
+                                    <option>{{$models->hair_color}}</option>
                                     @foreach ($shoes=App\Models\HairColor::orderby('name','asc')->get() as $shoe)
                                         <option>{{$shoe->name}}</option>
                                     @endforeach
@@ -61,7 +61,7 @@
                             <label>Complexions</label>
                             <!--<Input type="text" class="form-control" name="complexions"> -->
                                 <select style="width:100% !Important; height:40px; border-radius:7px;" name="complexions" id="complexions">
-                                    <option>--Select Option--</option>
+                                    <option>{{$models->complexions}}</option>
                                     @foreach ($shoes=App\Models\Complexion::orderby('name','asc')->get() as $shoe)
                                         <option>{{$shoe->name}}</option>
                                     @endforeach
@@ -83,8 +83,8 @@
                             <label>Experience</label>
                             <Input type="text" class="form-control" name="experience">
                         </div>
-
-                        <div class="submit mt-3">
+                        
+                        <div class="submit  mt-3">
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </div>
                     </form>

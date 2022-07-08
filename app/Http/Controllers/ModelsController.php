@@ -19,6 +19,12 @@ class ModelsController extends Controller
         return view ('user.models',compact('models'));
     }
 
+    public function model_index()
+    {
+        $model_index=ApprovedModel::paginate(9);
+        return view ('user.index',compact('model_index'));
+    }
+
 
     public function individual(Request $request,$id)
     {

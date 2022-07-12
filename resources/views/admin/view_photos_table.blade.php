@@ -1,7 +1,8 @@
 @extends('admin.dashboard')
 @section('content')
     <div class="container-fluid py-1 px-3">
-        <p><a class="btn btn-primary float-right" href="{{url()->previous()}}">Back</a></p>
+        
+        <p><a class="btn btn-primary float-left" href="{{url()->previous()}}">Back</a></p>
         <table class="table table-bordered">
             <thead>
             <tr>
@@ -18,7 +19,7 @@
                     <th scope="row">{{$apply->id}}</th>
                     <td>{{ $apply->fullname }}</td>
                     <td>
-                      <img style="width:500px; height:400px; border-radius:7px; object-fit: contain; width:100%;" 
+                      <img style="width: 100%; height:150px; width:250px; border-radius:7px" 
                        src="imagemodels/photos/{{ $apply->photo}}" alt="images">
                     </td>                   
                     <td>
@@ -33,6 +34,8 @@
 
         {{ $photos->links() }}
      </div>
+
+      
 
 
 @endsection

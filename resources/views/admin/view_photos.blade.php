@@ -3,7 +3,8 @@
     <div class="container-fluid py-1 px-3">
         
         <div style="justify-content:center; align-item:center" class="row col-md-8 mx-auto mt-3 d-flex">
-            <p><a class="btn btn-primary float-right" href="{{url()->previous()}}">Back</a></p>
+            <p><a class="btn btn-primary float-left" href="{{url()->previous()}}">Back</a></p>
+            
             <div class="card mx-auto">
                 
                 <div class="card-header text-center mt-3 mb-3">
@@ -14,7 +15,7 @@
                             @csrf
                             <div class="form-group mb-3">
                                 <label>Full Name</label>
-                                <Input type="text" class="form-control" name="fullname">
+                                <Input type="text" class="form-control" value={{ $models->fullname }} name="fullname">
                             </div>
                             <div class="form-group mb-3">
                                 <label>Photo</label>
@@ -28,6 +29,7 @@
             </div>
         </div>
      </div>
+    
 
 
 @endsection

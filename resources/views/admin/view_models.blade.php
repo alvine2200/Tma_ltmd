@@ -49,6 +49,7 @@
                     <td>{{ $apply->experience }}</td>
                     <td>
                         <a href="{{url('edit_model',$apply->id)}}" class="btn btn-primary">Edit</a>
+                        <a href="{{url('view_photos',$apply->id)}}" class="btn btn-info">Add photo</a>
                         <a href="{{url('delete_model',$apply->id)}}" onclick="return confirm('Are you sure you want to delete this application?')" class="btn btn-danger">delete</a>
                     </td>
                 </tr>

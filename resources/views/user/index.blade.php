@@ -62,7 +62,7 @@
 					<a href="#" class="btn">Contact Us</a>
 				</div>
 				<div class="image">
-					<img src="images/model11.jpg" alt="image">
+					<img src="images/model9.jpg" alt="image">
 				</div>
 			</div>
 
@@ -82,67 +82,23 @@
 
     <div  class="flex-container">
         <div class="row">
-            <div class="image">
-                <img src="images/model9.jpg" class="img-responsive" alt="img">
-               <div class="description">
-                  <span>
-                     <h3 style="font-size:20px !Important">Aleisha Amanda</h3>
-                  </span>
 
-                   <h4 style="font-size:13px !Important">Commercial Model</h4>
-                </div>
-            </div>
-            <div class="image">
-                <img src="images/model6.jpg" class="img-responsive" alt="img">
-               <div class="description">
-                  <span>
-                     <h3 style="font-size:20px !Important">Aleisha Amanda</h3>
-                  </span>
+            @foreach ($model_index as $model)
+               <a href="{{ url('individual',$model->id)}}"> <div class="image">
+                  <img src="imagemodels/photos/{{$model->photo}}" class="img-responsive" alt="img">
+                    <div class="description">
+                        <span>
+                            <h3 style="font-size:20px !Important">{{$model->fullname}}</h3>
+                        </span>
 
-                   <h4 style="font-size:13px !Important">Commercial Model</h4>
-                </div>
-            </div>
-            <div class="image">
-                <img src="images/model2.jpg" class="img-responsive" alt="img">
-               <div class="description">
-                  <span>
-                     <h3 style="font-size:20px !Important">Aleisha Amanda</h3>
-                  </span>
+                        <h4 style="font-size:13px !Important">{{$model->category}}</h4>
+                        </div>
+                    </div>
+               </a>
+            @endforeach
+            
 
-                   <h4 style="font-size:13px !Important">Commercial Model</h4>
-                </div>
-            </div>
-            <div class="image">
-                <img src="images/model5.jpg" class="img-responsive" alt="img">
-               <div class="description">
-                  <span>
-                     <h3 style="font-size:20px !Important">Aleisha Amanda</h3>
-                  </span>
-
-                   <h4 style="font-size:13px !Important">Commercial Model</h4>
-                </div>
-            </div>
-            <div class="image">
-                <img src="images/model11.jpg" class="img-responsive" alt="img">
-               <div class="description">
-                  <span>
-                     <h3 style="font-size:20px !Important">Aleisha Amanda</h3>
-                  </span>
-
-                   <h4 style="font-size:13px !Important">Commercial Model</h4>
-                </div>
-            </div>
-            <div class="image">
-                <img src="images/model10.jpg" class="img-responsive" alt="img">
-               <div class="description">
-                  <span>
-                     <h3 style="font-size:20px !Important">Aleisha Amanda</h3>
-                  </span>
-
-                   <h4 style="font-size:13px !Important">Commercial Model</h4>
-                </div>
-            </div>
-
+            
 
         </div>
     </div>

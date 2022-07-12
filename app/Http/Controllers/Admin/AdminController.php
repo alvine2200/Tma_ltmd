@@ -241,11 +241,7 @@ class AdminController extends Controller
         return back()->with('success', 'Model deleted successfully');
     }
 
-    public function individual_photo()
-    {
-        $individuals=Photo::where('fullname');
-        return view('user.individualmodel',compact('individuals'));
-    }
+
 
 
 }

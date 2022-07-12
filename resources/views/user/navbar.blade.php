@@ -32,10 +32,10 @@
 
        <!-- <a href="#"><i class="fas fa-bars"></i></a> -->
 
-	     <div class="icons">
+	      <div class="icons">
 			<i class="fas fa-bars" id="menu-bars"></i>
-			<i class="fas fa-search" id="search-icon"></i>
-		</div>
+			{{-- <i class="fas fa-search" id="search-icon"></i> --}}
+		</div> 
 
 	</header>
  <!--header ends-->

@@ -28,8 +28,9 @@ class ModelsController extends Controller
 
     public function individual(Request $request,$id)
     {
-        $models=ApprovedModel::find($id);
-        return view ('user.individualmodel',compact('models'));
+        $models=ApprovedModel::find($id);        
+        $individuals=Photo::where('fullname',$models->fullname)->get();       
+        return view ('user.individualmodel',compact('models','individuals'));
     }
 
     public function apply()

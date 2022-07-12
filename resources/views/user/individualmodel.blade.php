@@ -149,14 +149,18 @@
     <div class="image-container">
         <div class="swiper">
             <!-- Additional required wrapper -->
+       
+
             <div class="swiper-wrapper">
               <!-- Slides -->
-              <div class="swiper-slide">
-                <img src="images/model2.jpg" class="img-responsive" alt="img"/>
-              </div>
-
-
-        </div>
+               @foreach ($individuals as $individual)
+               <div class="swiper-slide">
+                  <img src="imagemodels/photos/{{$individual['photo']}}" class="img-responsive" alt="img"/>
+                  </div> 
+                @endforeach           
+             
+           </div>
+        
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
 

@@ -40,7 +40,7 @@
                         <div class="form-group mb-3">
                             <label>Shoe Size</label>
                            <!-- <Input type="number" class="form-control" name="shoe_size"> -->
-                                <select style="width:100% !Important; height:40px; border-radius:7px; border:1px solid grey;" name="shoe" id="shoe">
+                                <select style="width:100% !Important; height:40px; border-radius:7px; border:1px solid grey;" name="shoe_size" id="shoe">
                                     <option>--Select Option--</option>
                                     @foreach ($shoes=App\Models\ShoeSize::orderby('name','asc')->get() as $shoe)
                                         <option>{{$shoe->name}}</option>

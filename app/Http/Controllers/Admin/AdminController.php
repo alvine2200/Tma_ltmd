@@ -103,9 +103,11 @@ class AdminController extends Controller
     }
 
 
-    public function view_photo()
+    public function view_photo($id)
     {
-        return view('admin.view_photos');
+
+        $models=ApprovedModel::find($id);
+        return view('admin.view_photos',compact('models'));
     }
 
     public function add_photo(Request $request)
@@ -120,9 +122,9 @@ class AdminController extends Controller
             return back()->with('fail',$validator->errors());
         }
 
-        $application=Application::where('fullname', $request->fullname)->first();
+        $models=ApprovedModel::where('fullname', $request->fullname)->first();
 
-        if(!$application)
+        if(!$models)
         {
             return back()->with('fail','Fullname not found! kindly check and try again');
         }
@@ -136,7 +138,7 @@ class AdminController extends Controller
         }
 
         Photo::firstOrCreate([
-            'fullname' => $application->fullname,
+            'fullname' => $models->fullname,
             'photo' => $photo
         ]);
 
@@ -237,6 +239,12 @@ class AdminController extends Controller
         $models=ApprovedModel::find($id);
         $models->delete();
         return back()->with('success', 'Model deleted successfully');
+    }
+
+    public function individual_photo()
+    {
+        $individuals=Photo::where('fullname');
+        return view('user.individualmodel',compact('individuals'));
     }
 
 

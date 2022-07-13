@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+i<!DOCTYPE html>
 <html>
 <head>
 
@@ -137,6 +137,7 @@
                     </h5>
 
                     <h5>Experience: {{$models->experience}}</h5>
+                    <h5>Book Model: <a href="https://wa.me/254712135643"  class="btn btn-primary btn-lg"><i class="fa fa-whatsapp"></i>Whatsapp</a></h5>
                 </span>
             </div>
 

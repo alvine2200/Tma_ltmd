@@ -42,6 +42,14 @@
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link text-white" href="{{url('contact_received')}}">
+              <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                <i class="material-icons opacity-10">inbox</i>
+              </div>
+              <span class="nav-link-text ms-1">Contact Message</span>
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link text-white" href="{{url('photos')}}">
               <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                 <i class="material-icons opacity-10">photo</i>
@@ -49,6 +57,7 @@
               <span class="nav-link-text ms-1">Photos</span>
             </a>
           </li>
+         
           <li class="nav-item">
             <a class="nav-link text-white" href="{{url('end')}}">
               <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">

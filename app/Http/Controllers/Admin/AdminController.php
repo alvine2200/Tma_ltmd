@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\User;
 use App\Models\Photo;
+use App\Models\Contact;
 use App\Models\Application;
 use Illuminate\Http\Request;
 use App\Models\ApprovedModel;
@@ -250,6 +251,19 @@ class AdminController extends Controller
 
     }
 
+    public function contact_received()
+    {
+        $contact=Contact::paginate(15);
+        return view('admin.contactmessage')->with('contact', $contact);
+    }
+
+    public function delete_message($id)
+    {
+        $contact=Contact::find($id);
+        $contact->delete();
+        
+        return back()->with('success','Message deleted successfully');
+    }
 
 
 

@@ -27,6 +27,8 @@ Route::any('individual/{id}',[ModelsController::class,'individual']);
 Route::any('apply',[ModelsController::class,'apply']);
 Route::any('contact',[ModelsController::class,'contact']);
 Route::post('contact_form',[ModelsController::class,'contact_form']);
+Route::get('contact_received',[AdminController::class,'contact_received']);
+Route::any('delete_message/{id}',[AdminController::class,'delete_message']);
 Route::post('application_form',[ModelsController::class,'application_form']);
 Route::any('models_index',[ModelsController::class,'model_index']);
 Route::get('butterfly',[ModelsController::class,'butterflies']);
@@ -54,4 +56,5 @@ Route::any('store_models',[AdminController::class,'store_model']);
 Route::any('edit_model/{id}',[AdminController::class,'edit']);
 Route::any('delete_model/{id}',[AdminController::class,'delete_model']);
 Route::any('update_model/{id}',[AdminController::class,'update_model']);
+
 

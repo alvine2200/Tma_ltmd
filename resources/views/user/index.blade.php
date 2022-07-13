@@ -96,9 +96,9 @@
                     </div>
                </a>
             @endforeach
-            
 
-            
+
+
 
         </div>
     </div>
@@ -126,21 +126,22 @@
 				<p>Here at Manyatta we identify talents, nurture them with the best skills interms of fashion, modelling and life skills in general. we work and develop our models from scratch to sky </p>
 				<p>we're so determined with our team to achieve the great from this fiels. welcome all </p>
 
-			 <div class="icons-container">
-				<div class="icons">
+			  <div class="icons-container">
+                {{--
+                <div class="icons">
 					<i class=""></i>
 					<a href="#"><span>Try us Today</span></a>
-			     </div>
+			     </div>  --}}
 
 				<div class="icons">
 					<i class=""></i>
 					<a href="{{ url('models')}}"><span>View Models</span></a>
 				</div>
 
-				<div class="icons">
+				{{-- <div class="icons">
 					<i class=""></i>
 					<span>24/7 services</span>
-				</div>
+				</div> --}}
 				<a href="{{ url('contact')}}" class="btn">Contact us</a>
 			 </div>
 		  </div>

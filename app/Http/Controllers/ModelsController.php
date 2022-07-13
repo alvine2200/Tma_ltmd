@@ -28,8 +28,8 @@ class ModelsController extends Controller
 
     public function individual(Request $request,$id)
     {
-        $models=ApprovedModel::find($id);        
-        $individuals=Photo::where('fullname',$models->fullname)->get();       
+        $models=ApprovedModel::find($id);
+        $individuals=Photo::where('fullname',$models->fullname)->get();
         return view ('user.individualmodel',compact('models','individuals'));
     }
 
@@ -93,6 +93,14 @@ class ModelsController extends Controller
 
         return back()->with('success','Form submitted successfully');
 
+    }
+
+    public function butterflies()
+    {
+         $models=ApprovedModel::where('status','butterfly')->get();
+
+         return view('user.butterflies',compact('models'));
+        
     }
 
 }

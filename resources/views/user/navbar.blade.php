@@ -9,6 +9,7 @@
 			<a href="{{url('models')}}">models</a>
 			<a href="{{url('apply')}}">Apply</a>
 			<a href="{{url('contact')}}">contact us</a>
+            <a href="{{url('butterfly')}}">Butterfly</a>
 		</nav>
 
         @if (Session::has('success'))
@@ -35,7 +36,7 @@
 	      <div class="icons">
 			<i class="fas fa-bars" id="menu-bars"></i>
 			{{-- <i class="fas fa-search" id="search-icon"></i> --}}
-		</div> 
+		</div>
 
 	</header>
  <!--header ends-->

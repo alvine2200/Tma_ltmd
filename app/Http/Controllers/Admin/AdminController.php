@@ -241,6 +241,15 @@ class AdminController extends Controller
         return back()->with('success', 'Model deleted successfully');
     }
 
+    public function butterfly_add($id)
+    {
+        $butterfly=ApprovedModel::findOrFail($id);
+        $butterfly->status='butterfly';
+        $butterfly->update();
+        return back()->with('success', 'Model added to butterfly list successfully');
+
+    }
+
 
 
 

@@ -26,6 +26,7 @@
                 <th scope="col">Instagram</th>
                 <th scope="col">Tiktok</th>
                 <th scope="col">Experience</th>
+                <th scope="col">Status</th>
                 <th scope="col">Options</th>
             </tr>
             </thead>
@@ -45,11 +46,13 @@
                     <td>{{ $apply->complexions }}</td>
                     <td>{{ $apply->category }}</td>
                     <td>{{ $apply->instagram }}</td>
-                    <td>{{ $apply->tiktok }}</td>
+                    <td>{{ $apply->tiktok }}</td>                    
                     <td>{{ $apply->experience }}</td>
+                    <td>{{$apply->status}}</td>
                     <td>
                         <a href="{{url('edit_model',$apply->id)}}" class="btn btn-primary">Edit</a>
                         <a href="{{url('view_photos',$apply->id)}}" class="btn btn-info">Add photo</a>
+                        <a href="{{url('butterfly_add',$apply->id)}}" class="btn btn-secondary">Butterfly</a>
                         <a href="{{url('delete_model',$apply->id)}}" onclick="return confirm('Are you sure you want to delete this application?')" class="btn btn-danger">delete</a>
                     </td>
                 </tr>

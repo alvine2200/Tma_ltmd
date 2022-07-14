@@ -128,16 +128,16 @@ i<!DOCTYPE html>
                          SH-{{$models->shoe_size}}, HC-{{$models->hair_color}}, H-{{$models->hips}} </h5>
                     <h5> CX: {{$models->complexions}},
                     <h5> category: {{$models->category}}</h5>
-                    <h5>Instagram : <a href="https://www.instagram.com/manyattafilms/?hl=en">
-                                        <i class="fab fa-instagram-square"></i>--{{$models->instagram}}--
-                                     </a>
-                        Tiktok: <a href="https://www.tiktok.com/discover/kfc-kenya?lang=en">
-                                   <i class="fab fa-tiktok"></i>--{{$models->tiktok}}--
+                    <h5>Instagram : <a href="#">
+                                        <i class="fab fa-instagram-square"></i> {{$models->instagram}}
+                                     </a> <br><br>
+                        Tiktok: <a href="#">
+                                   <i class="fab fa-tiktok"></i> {{$models->tiktok}}
                                 </a>
                     </h5>
 
                     <h5>Experience: {{$models->experience}}</h5>
-                    <h5>Book Model: <a href="https://wa.me/254712135643"  class="btn btn-primary btn-lg"><i class="fa fa-whatsapp"></i>Whatsapp</a></h5>
+                    <h5>Book Model: <a href="https://wa.me/254789133541"  class="btn"> <i class="fab fa-whatsapp fa-lg"></i> Whatsapp</a></h5>
                 </span>
             </div>
 
@@ -150,18 +150,18 @@ i<!DOCTYPE html>
     <div class="image-container">
         <div class="swiper">
             <!-- Additional required wrapper -->
-       
+
 
             <div class="swiper-wrapper">
               <!-- Slides -->
                @foreach ($individuals as $individual)
                <div class="swiper-slide">
                   <img src="imagemodels/photos/{{$individual['photo']}}" class="img-responsive" alt="img"/>
-                  </div> 
-                @endforeach           
-             
+                  </div>
+                @endforeach
+
            </div>
-        
+
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
 

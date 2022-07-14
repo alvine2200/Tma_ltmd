@@ -48,7 +48,7 @@
 					<span>Fashion And Modelling</span>
 					<h3>Thera Modelling Agency</h3>
 					<p> Welcome To TMA, a home to Fashion, Modelling and Videography.  <p>
-					<a href="#" class="btn">Contact Us</a>
+					<a href="https://wa.me/254789133541" class="btn"> <i class="fab fa-whatsapp fa-lg"></i> Whatsapp</a>
 				</div>
 				<div class="image">
 					<img src="images/model2.jpg" alt="image">
@@ -58,8 +58,8 @@
 				<div class="content">
 					<span>Fashion And Modelling</span>
 					<h3>Thera Modelling Agency</h3>
-					<p> Welcome To TMA, a home to Fashion, Modelling and Videography.  <p>
-					<a href="#" class="btn">Contact Us</a>
+					<p> Welcome To TMA, a home to Fashion, Modelling and Videography.<p>
+					<a href="https://wa.me/254789133541" class="btn"> <i class="fab fa-whatsapp fa-lg"></i> Whatsapp </a>
 				</div>
 				<div class="image">
 					<img src="images/model9.jpg" alt="image">
@@ -142,7 +142,7 @@
 					<i class=""></i>
 					<span>24/7 services</span>
 				</div> --}}
-				<a href="{{ url('contact')}}" class="btn">Contact us</a>
+				{{-- <a href="{{ url('contact')}}" class="btn">Contact us</a> --}}
 			 </div>
 		  </div>
 	</div>

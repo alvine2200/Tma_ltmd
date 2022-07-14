@@ -22,7 +22,7 @@
 		</div>
 		<div class="box">
 			<h3>contact info</h3>
-			<a href="#"><i class="fab fa-whatsapp fa-lg"></i>
+			<a href="https://wa.me/254789133541"><i class="fab fa-whatsapp fa-lg"></i>
                  <i class="fas fa-phone-square-alt fa-lg"></i>
                  <i class="fas fa-sms fa-lg"></i>
                  +2547 891 335 41

@@ -12,7 +12,7 @@
         <li class="nav-item">
           <a class="nav-link text-white active bg-gradient-primary" href="{{url('admin_dashboard')}}">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">dashboard</i>
+              <em class="material-icons opacity-10">dashboard</em>
             </div>
             <span class="nav-link-text ms-1">Dashboard</span>
           </a>
@@ -20,7 +20,7 @@
         <li class="nav-item">
           <a class="nav-link text-white " href="{{url('check')}}">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">table_view</i>
+              <em class="material-icons opacity-10">table_view</em>
             </div>
             <span class="nav-link-text ms-1">Applications</span>
           </a>
@@ -28,7 +28,7 @@
         <li class="nav-item">
             <a class="nav-link text-white " href="{{url('add_models')}}">
               <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                <i class="material-icons opacity-10">add</i>
+                <em class="material-icons opacity-10">add</em>
               </div>
               <span class="nav-link-text ms-1">Add Models</span>
             </a>
@@ -36,32 +36,39 @@
         <li class="nav-item">
             <a class="nav-link text-white " href="{{url('view_models')}}">
               <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                <i class="material-icons opacity-10">people</i>
+                <em class="material-icons opacity-10">people</em>
               </div>
               <span class="nav-link-text ms-1">Models</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="{{url('contact_received')}}">
+            <a class="nav-link text-white" href="{{url('stats')}}">
               <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                <i class="material-icons opacity-10">inbox</i>
+                <em class="material-icons opacity-10">table_view</em>
               </div>
-              <span class="nav-link-text ms-1">Contact Message</span>
+              <span class="nav-link-text ms-1">Butterfly Stats</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white" href="{{url('photos')}}">
               <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                <i class="material-icons opacity-10">photo</i>
+                <em class="material-icons opacity-10">photo</em>
               </div>
               <span class="nav-link-text ms-1">Photos</span>
             </a>
           </li>
-         
+          <li class="nav-item">
+            <a class="nav-link text-white" href="{{url('contact_received')}}">
+              <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                <em class="material-icons opacity-10">inbox</em>
+              </div>
+              <span class="nav-link-text ms-1">Contact Message</span>
+            </a>
+          </li>
           <li class="nav-item">
             <a class="nav-link text-white" href="{{url('end')}}">
               <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                <i class="material-icons opacity-10">person</i>
+                <em class="material-icons opacity-10">person</em>
               </div>
               <span class="nav-link-text ms-1">Log Out</span>
             </a>

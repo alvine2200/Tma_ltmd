@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ModelsController;
 use App\Http\Controllers\User\HomeController;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\ButterflyStatsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +35,10 @@ Route::any('/verify_user',[AdminController::class,'login_logic']);
 
 //admin begins
 Route::group(['middleware'=>'auth'],function(){
+    Route::get('stats',[ButterflyStatsController::class,'stats']);
+    Route::post('post_stats',[ButterflyStatsController::class,'add_stats']);
+    Route::get('show_stats/{id}',[ButterflyStatsController::class,'show_stats']);
+    Route::post('edit_stats/{id}',[ButterflyStatsController::class,'edit_stats']);
     Route::get('contact_received',[AdminController::class,'contact_received']);
     Route::get('admin_dashboard',[AdminController::class,'admin_dashboard']);
     Route::get('/end',[AdminController::class,'logout_admin']);

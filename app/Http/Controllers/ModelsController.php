@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Stat;
 use App\Models\Photo;
 use App\Models\Contact;
 use App\Models\Application;
@@ -98,8 +99,9 @@ class ModelsController extends Controller
     public function butterflies()
     {
          $models=ApprovedModel::where('status','butterfly')->get();
+         $data=Stat::first();
 
-         return view('user.butterflies',compact('models'));
+         return view('user.butterflies',compact('models','data'));
         
     }
 

@@ -39,7 +39,7 @@
                         </div>
                         <div class="form-group mb-3">
                             <label>Shoe Size</label>
-                           <!-- <Input type="number" class="form-control" name="shoe_size"> -->                                
+                    
                                 <select style="width:100% !Important; height:40px; border-radius:7px; border:1px solid grey;" name="shoe_size" id="shoe">
                                     <option>--Select Option--</option>
                                     @foreach ($shoes=App\Models\ShoeSize::orderby('name','asc')->get() as $shoe)
@@ -49,7 +49,7 @@
                         </div>
                         <div class="form-group mb-3">
                             <label>Hair Color</label>
-                            <!--<Input type="text" class="form-control" name="hair_color"> -->
+                            
                                 <select  style="width:100% !Important; height:40px; border-radius:7px;" name="hair_color" id="hair_color">
                                     <option>--select Option--</option>
                                     @foreach ($shoes=App\Models\HairColor::orderby('name','asc')->get() as $shoe)
@@ -59,7 +59,7 @@
                         </div>
                         <div class="form-group mb-3">
                             <label>Complexions</label>
-                            <!--<Input type="text" class="form-control" name="complexions"> -->
+                           
                                 <select style="width:100% !Important; height:40px; border-radius:7px;" name="complexions" id="complexions">
                                     <option>--Select Option--</option>
                                     @foreach ($shoes=App\Models\Complexion::orderby('name','asc')->get() as $shoe)

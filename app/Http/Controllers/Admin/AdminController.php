@@ -261,7 +261,7 @@ class AdminController extends Controller
     {
         $contact=Contact::find($id);
         $contact->delete();
-        
+
         return back()->with('success','Message deleted successfully');
     }
 

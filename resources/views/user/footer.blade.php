@@ -42,7 +42,7 @@
 
 
 	</div>
-	<div class="credit">copyright @ {{now()->format('Y')}}</div> by <span>Alvine Llavu</span></div>
+	<div class="credit">copyright @ {{now()->format('Y')}}</div> by <a href="https://www.github.com/alvine2200"><span>alvine2200</span></a></div>
 </section>
 
 

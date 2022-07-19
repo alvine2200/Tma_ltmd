@@ -79,6 +79,14 @@ i<!DOCTYPE html>
                 width: 100%;
                 object-fit: contain;
             }
+
+            .image-container .individual-images .row .image img{
+                width:200px;
+                height:200px;
+                margin:20px;
+                object-fit: contain;
+
+            }
         }
 
 
@@ -91,21 +99,21 @@ i<!DOCTYPE html>
                 margin: 50px;
 
             }
-           .image-container .swiper {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            width: 400px;
-            height: auto !important;
-            overflow: hidden;
-            border-radius:10px;
-            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-            }
-            .image-container .swiper .swiper-wrapper .swiper-slide img {
-                width: 100%;
-                object-fit: contain;
 
+            .image-container .individual-images{
+               display:flex;
+               column-width:100%;
+               margin:20px;
+               border-radius:20px;
+               box-shadow:  rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+            }
+            .image-container .individual-images .row .image img{
+                width:350px;
+                height:350px;
+                margin:20px;
+            }
+            .image-container .individual-images .row .image #zoom:hover{
+                transform:scale(1.5);
             }
 
 
@@ -148,12 +156,9 @@ i<!DOCTYPE html>
     </div>
 
     <div class="image-container">
-        <div class="swiper">
-            <!-- Additional required wrapper -->
-
-
+        {{-- <div class="swiper">
             <div class="swiper-wrapper">
-              <!-- Slides -->
+
                @foreach ($individuals as $individual)
                <div class="swiper-slide">
                   <img src="imagemodels/photos/{{$individual['photo']}}" class="img-responsive" alt="img"/>
@@ -161,17 +166,25 @@ i<!DOCTYPE html>
                 @endforeach
 
            </div>
-
-            <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
-
-            <!-- If we need navigation buttons -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
-
-            <!-- If we need scrollbar -->
             <div class="swiper-scrollbar"></div>
-     </div>
+        </div> --}}
+
+        <div class="individual-images">
+            <div class="row">
+
+                 <div class="image">
+                    @foreach ($individuals as $individual)
+
+                        <img id="zoom" src="imagemodels/photos/{{ $individual['photo']}}" alt="image" class="img-responsive">
+
+                    @endforeach
+                </div>
+
+            </div>
+        </div>
 
     </div>
 

@@ -11,35 +11,59 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" type="text/css" href="css/manyatta.css">
    <style>
-    .column {
-    float: left;
-    width: 50%;
-    height: 50px;
-    border: 1px solid black;
-    
+
+    .row{
+        display: flex !important;
+        width: 100% !important;
+        justify-content: center !important;
+        align-items: center !important
     }
-    .column p{
-        margin-left:30px;
-        font-size: 16px;
-       
+    .width{
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            width: 50%;
+            justify-content: center;
+            align-items: center;
+            height: auto !important;
+            overflow: hidden;
+            border-radius:10px;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+    }
+    .width span{
+        padding:30px;
+        font-size:16px;
+        font-weight:bold;
+
+
     }
 
-    /* Clear floats after the columns */
-    .row:after {
-    content: "";
-    display: table;
-    clear: both;
+    .width p{
+        font-size:16px;
+        font-weight:bold;
     }
+
 
     @media screen and (max-width: 600px) {
-     .column {
-    width: 50%;
-    
-   }
-     .column p{
-        margin-left:30px;
-        font-size: 16px;
-    }
+        .row{
+            margin-bottom:30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: auto !important;
+            overflow: hidden;
+            border-radius:10px;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        }
+        .width span{
+        padding:30px;
+        font-size:14px;
+        font-weight:bold;
+
+         }
 
 }
    </style>
@@ -66,46 +90,39 @@
                 @endforeach
 
             </div>
-            
+
         </div>
 
         <section class="table">
 
             <h3 style="margin-bottom: 30px;" class="sub-heading">Butterflies Stats</h3>
-            
-           <div class="summary">
-                <div class="row">   
-                    <div class="column">
-                        <p>Followers</p>
-                    </div>
-                    <div class="column">
-                        <p style="font-weight:bold;">{{$data->followers}}</p>
-                    </div>
-                    <div class="column">
-                        <p>Likes</p>
-                    </div>
-                    <div class="column">
-                        <p style="font-weight:bold;">{{$data->likes}}</p>
-                    </div>
-                    <div class="column">
-                        <p>Posts </p>
-                    </div>
-                    <div class="column">
-                        <p style="font-weight:bold;">{{$data->posts}}</p>
-                    </div>
-                    <div class="column">
-                        <p>Age Range</p>
-                    </div>
-                    <div class="column">
-                        <p style="font-weight:bold;">{{$data->age_range}}</p>
-                    </div>
+
+            <div class="pictures">
+              <div class="row">
+                <div class="column width">
+                    <span> Followers </span>
+                    <p style="font-weight:bold;">{{$data->followers}}</p>
                 </div>
+                <div class="column width">
+                    <span> Likes </span>
+                    <p style="font-weight:bold;">{{$data->likes}}</p>
+                </div>
+                <div class="column width">
+                    <span>Posts </span>
+                    <p style="font-weight:bold;">{{$data->posts}}</p>
+                </div>
+                <div class="column width">
+                    <span> Age Range</span>
+                    <p style="font-weight:bold;">{{$data->age_range}}</p>
+                </div>
+
+              </div>
            </div>
 
-                        
-    
+
+
         </section>
-        
+
 
 
     <!--footer section starts-->

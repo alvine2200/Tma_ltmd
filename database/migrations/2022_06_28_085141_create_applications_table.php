@@ -34,7 +34,7 @@ return new class extends Migration
             $table->string('burst');
             $table->string('height');
             $table->string('measurement_time');
-            
+
 
             $table->string('headshot');
             $table->string('fullbody');

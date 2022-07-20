@@ -28,7 +28,7 @@
                  +2547 891 335 41
             </a>
 
-			<a href="#">Manyattafilms@gmail.com</a>
+			<a href="#">manyattafilms@gmail.com</a>
 
 		</div>
 
@@ -42,7 +42,7 @@
 
 
 	</div>
-	<div class="credit">copyright @ {{now()->format('Y')}}</div> by <a href="https://www.github.com/alvine2200"><span>alvine2200</span></a></div>
+	<div class="credit">copyright @ manyatafilms {{now()->format('Y')}}</div> by <a href="https://www.github.com/alvine2200"><span>alvine2200</span></a></div>
 </section>
 
 

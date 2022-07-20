@@ -31,6 +31,7 @@ Route::get('butterfly',[ModelsController::class,'butterflies']);
 Route::any('butterfly_add/{id}',[AdminController::class,'butterfly_add']);
 Route::get('login',[AdminController::class,'login_admin']);
 Route::any('/verify_user',[AdminController::class,'login_logic']);
+Route::get('book_model',[ModelsController::class,'book_model']);
 
 
 //admin begins

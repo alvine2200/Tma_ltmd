@@ -1,5 +1,5 @@
 i<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 
     <base href="/public">
@@ -137,15 +137,16 @@ i<!DOCTYPE html>
                     <h5> CX: {{$models->complexions}},
                     <h5> category: {{$models->category}}</h5>
                     <h5>Instagram : <a href="#">
-                                        <i class="fab fa-instagram-square"></i> {{$models->instagram}}
+                                        <em class="fab fa-instagram-square"></em> {{$models->instagram}}
                                      </a> <br><br>
                         Tiktok: <a href="#">
-                                   <i class="fab fa-tiktok"></i> {{$models->tiktok}}
+                                   <em class="fab fa-tiktok"></em> {{$models->tiktok}}
                                 </a>
                     </h5>
 
                     <h5>Experience: {{$models->experience}}</h5>
-                    <h5>Book Model: <a href="https://wa.me/254789133541"  class="btn"> <i class="fab fa-whatsapp fa-lg"></i> Whatsapp</a></h5>
+                    <h5>Book Model: <a href="https://wa.me/254789133541"  class="btn"> <em class="fab fa-whatsapp fa-lg"></em> Whatsapp</a>
+                                    <a href="{{url('book_model')}}"  class="btn"> <em class="fab fa-phone fa-lg"></em> Send request</a></h5>
                 </span>
             </div>
 
@@ -156,21 +157,6 @@ i<!DOCTYPE html>
     </div>
 
     <div class="image-container">
-        {{-- <div class="swiper">
-            <div class="swiper-wrapper">
-
-               @foreach ($individuals as $individual)
-               <div class="swiper-slide">
-                  <img src="imagemodels/photos/{{$individual['photo']}}" class="img-responsive" alt="img"/>
-                  </div>
-                @endforeach
-
-           </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-scrollbar"></div>
-        </div> --}}
 
         <div class="individual-images">
             <div class="row">

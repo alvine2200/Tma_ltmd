@@ -455,6 +455,12 @@
             {{$application->registered}}
         </div>
         <div class="col-md-6">
+            Do you accept the fact that most projects are within Nairobi and Kiambu county?
+        </div>
+        <div class="col-md-6">
+            {{$application->projects}}
+        </div>
+        <div class="col-md-6">
             Will you manage to visit agency for review and<br> orientation for the first 2 weeks if accepted?
         </div>
         <div class="col-md-6">

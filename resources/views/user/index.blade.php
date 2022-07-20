@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Manyatta Films And Modelling Agency</title>
+	<title>Manyatta Films And modeling Agency</title>
 
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 
@@ -45,10 +45,10 @@
 		<div class="swiper-wrapper wrapper">
 			<div class="swiper-slide slide">
 				<div class="content">
-					<span>Fashion And Modelling</span>
-					<h3>Thera Modelling Agency</h3>
-					<p> Welcome To TMA, a home to Fashion, Modelling and Videography.  <p>
-					<a href="https://wa.me/254789133541" class="btn"> <i class="fab fa-whatsapp fa-lg"></i> Whatsapp</a>
+					<span>modeling and casting</span>
+					<h3>Thera modeling Agency</h3>
+					<p> Welcome To TMA, a home to Professional Modeling and Casting.  <p>
+					<a href="https://wa.me/254789133541" class="btn"> <em class="fab fa-whatsapp fa-lg"></em> Whatsapp</a>
 				</div>
 				<div class="image">
 					<img src="images/model2.jpg" alt="image">
@@ -56,13 +56,13 @@
 			</div>
             <div class="swiper-slide slide">
 				<div class="content">
-					<span>Fashion And Modelling</span>
-					<h3>Thera Modelling Agency</h3>
-					<p> Welcome To TMA, a home to Fashion, Modelling and Videography.<p>
-					<a href="https://wa.me/254789133541" class="btn"> <i class="fab fa-whatsapp fa-lg"></i> Whatsapp </a>
+					<span>modeling and casting</span>
+					<h3>Thera modeling Agency</h3>
+					<p> Welcome To TMA, a home to Professional Modeling and Casting.  <p>
+					<a href="https://wa.me/254789133541" class="btn"> <em class="fab fa-whatsapp fa-lg"></em> Whatsapp</a>
 				</div>
 				<div class="image">
-					<img src="images/model9.jpg" alt="image">
+					<img src="images/model1.jpg" alt="image">
 				</div>
 			</div>
 
@@ -122,8 +122,8 @@
 		</div>
 
 			<div class="content">
-				<h3>Best Modelling agency in the city</h3>
-				<p>Here at Manyatta we identify talents, nurture them with the best skills interms of fashion, modelling and life skills in general. we work and develop our models from scratch to sky </p>
+				<h3>Best modeling agency in the city</h3>
+				<p>Here at Manyatta we identify talents, nurture them with the best skills interms of fashion, modeling and life skills in general. we work and develop our models from scratch to sky </p>
 				<p>we're so determined with our team to achieve the great from this fiels. welcome all </p>
 
 			  <div class="icons-container">

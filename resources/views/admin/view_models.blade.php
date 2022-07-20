@@ -36,7 +36,7 @@
                 <tr>
                     <th scope="row">{{$apply->id}}</th>
                     <td>{{ $apply->fullname }}</td>
-                    <td><img style="width: 100%; height:150px; width:250px; border-radius:7px" src="imagemodels/photos/{{$apply->photo}}"></td>
+                    <td><img style="width: 100%; height:150px; width:250px; border-radius:7px" src="imagemodels/photos/{{$apply->photo}}" alt="image"></td>
                     <td>{{ $apply->weight }}</td>
                     <td>{{ $apply->height }}</td>
                     <td>{{ $apply->hips }}</td>

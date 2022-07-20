@@ -105,4 +105,9 @@ class ModelsController extends Controller
         
     }
 
+    public function book_model()
+    {
+        return view('user.book_model');
+    }
+
 }

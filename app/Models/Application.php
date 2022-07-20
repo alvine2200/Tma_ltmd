@@ -91,6 +91,7 @@ class Application extends Model
         'fee',
         'contract',
         'terms',
+        'projects',
 
     ];
 

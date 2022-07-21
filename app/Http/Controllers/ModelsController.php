@@ -5,12 +5,14 @@ namespace App\Http\Controllers;
 use App\Models\Stat;
 use App\Models\Photo;
 use App\Models\Contact;
+use App\Models\BookModel;
 use App\Models\Application;
 use Illuminate\Http\Request;
 use App\Models\ApprovedModel;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\Storerequest;
 use App\Http\Requests\Applicationrequest;
+use Illuminate\Support\Facades\Validator;
 
 class ModelsController extends Controller
 {
@@ -102,12 +104,38 @@ class ModelsController extends Controller
          $data=Stat::first();
 
          return view('user.butterflies',compact('models','data'));
-        
+
     }
 
     public function book_model()
     {
         return view('user.book_model');
+    }
+
+    public function booking_store(Request $request,BookModel $bookModel)
+    {
+        $validator=Validator::make($request->all(),[
+            'name'=>'required|string',
+            'when'=>'required|date',
+            'where'=>'required|string',
+            'category'=>'required|string',
+            'phone'=>'required|string|min:10',
+            'purpose'=>'required|string',
+            'budget'=>'required|string',
+            'models_name'=>'required|string',
+            
+        ]);
+
+        if($validator->fails())
+        {
+            return back()->with('errors',$validator->errors());
+        }
+
+        $validated=$request->only('name','models_name','when','where','phone','purpose','budget','project_type','category');
+        $bookModel::firstOrCreate($validated);
+        return back()->with('success','Booking is successfully sent, wait for response');
+
+
     }
 
 }

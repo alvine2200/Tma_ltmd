@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ModelsController;
 use App\Http\Controllers\User\HomeController;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\BookingController;
 use App\Http\Controllers\Admin\ButterflyStatsController;
 
 /*
@@ -32,6 +33,7 @@ Route::any('butterfly_add/{id}',[AdminController::class,'butterfly_add']);
 Route::get('login',[AdminController::class,'login_admin']);
 Route::any('/verify_user',[AdminController::class,'login_logic']);
 Route::get('book_model',[ModelsController::class,'book_model']);
+Route::post('post_book',[ModelsController::class,'booking_store']);
 
 
 //admin begins
@@ -60,6 +62,9 @@ Route::group(['middleware'=>'auth'],function(){
     Route::any('edit_model/{id}',[AdminController::class,'edit']);
     Route::any('delete_model/{id}',[AdminController::class,'delete_model']);
     Route::any('update_model/{id}',[AdminController::class,'update_model']);
+    Route::get('view_booking',[BookingController::class,'view_booking']);
+    Route::any('approve_booking/{id}',[BookingController::class,'approve_booking']);
+    Route::any('delete_booking/{id}',[BookingController::class,'delete_booking']);
 
 });
 

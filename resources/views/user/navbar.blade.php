@@ -17,6 +17,7 @@
                 {{Session::get('success')}}
             </div>
         @endif
+        <?php Session::forget('success'); ?>
 
         <span class="error">
             @if ($errors->any())
@@ -29,6 +30,7 @@
             </div>
            @endif
        </span>
+       <?php Session::forget('errors'); ?>
 
 
        <!-- <a href="#"><i class="fas fa-bars"></i></a> -->

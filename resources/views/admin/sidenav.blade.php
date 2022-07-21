@@ -26,11 +26,19 @@
           </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link text-white " href="{{url('view_booking')}}">
+              <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                <em class="material-icons opacity-10">book</em>
+              </div>
+              <span class="nav-link-text ms-1">View Bookings</span>
+            </a>
+          </li>
+        <li class="nav-item">
             <a class="nav-link text-white " href="{{url('add_models')}}">
               <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                 <em class="material-icons opacity-10">add</em>
               </div>
-              <span class="nav-link-text ms-1">Add Models</span>
+              <span class="nav-link-text ms-1">Register New Models</span>
             </a>
           </li>
         <li class="nav-item">

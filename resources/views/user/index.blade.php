@@ -127,32 +127,18 @@
 				<p>we're so determined with our team to achieve the great from this fiels. welcome all </p>
 
 			  <div class="icons-container">
-                {{--
-                <div class="icons">
-					<i class=""></i>
-					<a href="#"><span>Try us Today</span></a>
-			     </div>  --}}
 
 				<div class="icons">
 					<i class=""></i>
 					<a href="{{ url('models')}}"><span>View Models</span></a>
 				</div>
 
-				{{-- <div class="icons">
-					<i class=""></i>
-					<span>24/7 services</span>
-				</div> --}}
-				{{-- <a href="{{ url('contact')}}" class="btn">Contact us</a> --}}
+
 			 </div>
 		  </div>
 	</div>
 </section>
  <!--about section ends-->
-
- <!--menu section starts-->
-
-<!--review section ends-->
-
 
 <!--order section starts-->
 <section  class="order" id="contact_us">
@@ -198,8 +184,6 @@
 
     </form>
 </section>
-<!--order section ends-->
-
 <!--footer section starts-->
  @include('user.footer');
 

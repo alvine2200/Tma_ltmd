@@ -36,8 +36,7 @@
                     <td>{{ $apply->gender }}</td>
                     <td>{{ $apply->about_yourself }}</td>
                     <td>
-                        <a href="{{url('view_applications',$apply->id)}}" class="btn btn-primary">View</a>|
-                        <a href="{{url('admit',$apply->id)}}" class="btn btn-info">Approve</a>|
+                        <a href="{{url('view_applications',$apply->id)}}" class="btn btn-primary">View</a>
                         <a href="{{url('destroy',$apply->id)}}" onclick="return confirm('Are you sure you want to delete this application?')" class="btn btn-danger">delete</a>
                     </td>
                 </tr>

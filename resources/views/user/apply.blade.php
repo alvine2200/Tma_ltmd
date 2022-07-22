@@ -527,7 +527,7 @@
             </div>
             <div class="input">
                 <span>Category</span>
-                <select class="category" multiple name="category">
+                <select class="category" multiple="multiple" name="category[]">
                     <option value="casual">casual shoot</option>
                     <option value="professional">professional shoot</option>
                     <option value="fashion">fashion </option>

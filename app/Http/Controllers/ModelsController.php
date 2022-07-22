@@ -95,6 +95,10 @@ class ModelsController extends Controller
         if($request->piercing){
             $readyinput['piercing'] = json_encode($request->piercing);
         }
+
+        if($request->category){
+            $readyinput['category'] = json_encode($request->category);
+        }
     
 
         $application::firstOrCreate($readyinput);

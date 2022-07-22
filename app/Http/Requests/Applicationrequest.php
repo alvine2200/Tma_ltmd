@@ -102,7 +102,7 @@ class Applicationrequest extends FormRequest
             'whatsapp'=>'required|string',
             'confidence'=>'required|string',
             'registered'=>'required|string',
-            'category'=>'required|string',
+            'category'=>'required',
 
             'review'=>'required|string',
             'fee'=>'required|string',

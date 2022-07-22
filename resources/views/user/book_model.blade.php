@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 
+    <base href="/public">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -33,7 +35,7 @@
             </div>
             <div class="input">
                 <span>Model's name</span>
-                <input type="text" name="models_name" value="" required placeholder="Enter your name" >
+                <input type="text" name="models_name" style="font-weight: bold;" value="{{$models->fullname}}" required placeholder="Enter your name" >
             </div>
             <div class="input">
                 <span>phone number</span>
@@ -71,7 +73,7 @@
                 <span>Purpose for booking</span>
                 <input name="purpose" required placeholder="For what purpose are you booking this model" >
             </div>
-            
+
           </div>
           <input type="submit" value="Submit"  name="booking-submit" class="btn">
 

@@ -12,6 +12,7 @@ class BookingController extends Controller
 {
     public function view_booking()
     {
+
         $booking=BookModel::paginate(15);
         return view('admin.booking', compact('booking'));
     }
@@ -21,11 +22,6 @@ class BookingController extends Controller
         $booking=BookModel::findOrFail($id);
         $booking->status='Approved';
         $booking->update();
-
-        //Sms::send("Welcome to tma")->to(['+254712135643'])->dispatch();
-        // Sms::send("Your model application is approved successfully!", function($sms) {
-        //     $sms->to(['254712135643', '254712863995']); # The numbers to send to.
-        // });
 
         return back()->with('success','Booking Approved successfully');
     }

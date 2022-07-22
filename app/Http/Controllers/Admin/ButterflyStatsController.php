@@ -30,7 +30,7 @@ class ButterflyStatsController extends Controller
     }
 
     public function edit_stats(StatsRequest $request,$id)
-    {   
+    {
         $data=Stat::find($id);
         $validated=$request->validated();
         $data->update($validated);

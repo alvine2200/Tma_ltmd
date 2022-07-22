@@ -92,8 +92,10 @@ return new class extends Migration
             $table->string('whatsapp');
             $table->string('confidence');
             $table->string('registered');
+            $table->string('category');
 
             $table->string('review');
+            $table->string('projects');
             $table->string('fee');
             $table->string('contract');
             $table->string('terms');

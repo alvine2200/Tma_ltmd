@@ -85,7 +85,7 @@ class Applicationrequest extends FormRequest
             'unique'=>'required|string',
             'speciality'=>'required|string',
             'name_of_agency'=>'required|string',
-            'piercing'=>'required|string',
+            'piercing'=>'required',
             'tatoos'=>'required|string',
             'scars'=>'required|string',
             'enhancement'=>'required|string',
@@ -102,6 +102,7 @@ class Applicationrequest extends FormRequest
             'whatsapp'=>'required|string',
             'confidence'=>'required|string',
             'registered'=>'required|string',
+            'category'=>'required|string',
 
             'review'=>'required|string',
             'fee'=>'required|string',

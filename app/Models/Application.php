@@ -86,6 +86,7 @@ class Application extends Model
         'whatsapp',
         'confidence',
         'registered',
+        'category',
 
         'review',
         'fee',

@@ -7,6 +7,8 @@
     <title>Manyatta Films And Modelling Agency</title>
 
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css" rel="stylesheet"/>
+
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -226,6 +228,43 @@
                </select>
             </div>
             <div class="input">
+                <span>Have you done professional shoot before?</span>
+                <select name="professional" style="width:100%">
+                    <option value="">--select option--</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+               </select>
+            </div>
+            <div class="input">
+                <span>Describe your photoshoot experience?</span>
+                <textarea name="describe_shoot" placeholder="Express yourself" required  cols="20" rows="7"></textarea>
+            </div>
+            <div class="input">
+                <span>Would you be open to nude modelling?</span>
+                <select  name="nude" style="width:100%">
+                    <option value="">--select option--</option>
+                    <option value="semi">Semi</option>
+                    <option value="implied">Implied</option>
+                    <option value="full">Full</option>
+                    <option value="none">None</option>
+               </select>
+               <img src="images/nde.jpg" style="width: 350px; height: 250px; display:flex; flex-wrap: wrap; padding:10px;"class="img-responsive" alt="img">
+            </div>           
+            
+            <div class="input">
+                <span>Would you be open to swimsuit/lingerie modelling?</span>
+                <select  name="swimsuit" style="width:100%">
+                    <option value="">--select option--</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+               </select>
+                <img src="images/Swim Ling.jpg" style="width: 350px; height: 250px; display:flex; flex-wrap: wrap; padding:20px;"class="img-responsive" alt="img">
+            </div>
+            <div class="input">
+                <span>Explain reasons for the above response?</span>
+                <textarea name="response" placeholder="Express yourself" required  cols="20" rows="7"></textarea>
+            </div>
+            <div class="input">
                 <span>Do you work out regularly?</span>
                 <select  name="workout" style="width:100%">
                     <option value="">--select option--</option>
@@ -241,43 +280,6 @@
                     <option value="no">No</option>
                </select>
             </div>
-            <div class="input">
-                <span>Have you done professional shoot before?</span>
-                <select name="professional" style="width:100%">
-                    <option value="">--select option--</option>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-               </select>
-            </div>
-            <div class="input">
-                <span>Would you be open to nude modelling?</span>
-                <select  name="nude" style="width:100%">
-                    <option value="">--select option--</option>
-                    <option value="semi">Semi</option>
-                    <option value="implied">Implied</option>
-                    <option value="full">Full</option>
-                    <option value="none">None</option>
-               </select>
-               <img src="images/nde.jpg" style="width: 350px; height: 250px; display:flex; flex-wrap: wrap; padding:10px;"class="img-responsive" alt="img">
-            </div>
-            <div class="input">
-                <span>Describe your photoshoot experience?</span>
-                <textarea name="describe_shoot" placeholder="Express yourself" required  cols="20" rows="7"></textarea>
-            </div>
-           
-            <div class="input">
-                <span>Would you be open to swimsuit/lingerie modelling?</span>
-                <select  name="swimsuit" style="width:100%">
-                    <option value="">--select option--</option>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-               </select>
-                <img src="images/Swim Ling.jpg" style="width: 350px; height: 250px; display:flex; flex-wrap: wrap; padding:20px;"class="img-responsive" alt="img">
-            </div>
-            <div class="input">
-                <span>Explain reasons for the above response?</span>
-                <textarea name="response" placeholder="Express yourself" required  cols="20" rows="7"></textarea>
-              </div>
             <div class="input">
                 <span>Where do you see yourself in 5 years?</span>
                 <textarea name="fiveyears" placeholder="Express yourself" required  cols="20" rows="7"></textarea>
@@ -372,7 +374,7 @@
             </div>
             <div class="input">
                 <span>Do you have any piercings?</span>
-                <select  name="piercing" style="width:100%">
+                <select class="piercing" multiple="multiple" name="piercing[]" style="width:100%">
                     <option value="">--select option--</option>
                     <option value="Yes, Ears">Yes, Ears</option>
                     <option value="yes, nose">Yes, Nose</option>
@@ -523,7 +525,23 @@
                     <option value="10">10</option>
                </select>
             </div>
+            <div class="input">
+                <span>Category</span>
+                <select class="category" multiple name="category">
+                    <option value="casual">casual shoot</option>
+                    <option value="professional">professional shoot</option>
+                    <option value="fashion">fashion </option>
+                    <option value="swimsuit-lingerie">swimsuit-lingerie</option>
+                    <option value="fitness">fitness</option>
+                    <option value="acting">Acting</option>
+                    <option value="video shoot">Video shoot</option>
+                    <option value="other">Other option...</option>
+                </select>
+            </div>
+
           </div>
+
+
 
 
           <span style="padding-bottom:30px; " class="heading" >
@@ -580,6 +598,29 @@
         </section>
 
     @include('user.footer')
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+            $('.piercing').select2({
+                width: '100%',
+                placeholder: "Select an Option",
+                allowClear: true
+            });
+
+        });
+        $(document).ready(function() {
+            $('.category').select2({
+                // width: '100%',
+                placeholder: "Select an Option",
+                allowClear: true
+            });
+
+        });
+    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         @if(session()->has('success'))

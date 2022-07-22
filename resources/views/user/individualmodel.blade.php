@@ -131,10 +131,9 @@
               </div>
               <div class="appearance">
                 <span>
-                    <h5 style="color:blue; font-size:50px; font-weight:bold; margin-bottom:20px;">{{$models->fullname}}</h5>
-                    <h5> Wt-{{$models->weight}}, Ht-{{$models->height}}, B/C-{{$models->burst_chest}},
-                         SH-{{$models->shoe_size}}, HC-{{$models->hair_color}}, H-{{$models->hips}} </h5>
-                    <h5> CX: {{$models->complexions}},
+                    <h5 style="color:blue; font-size:40px; font-weight:bold; margin-bottom:20px;">{{$models->fullname}}</h5>
+                    <h5> WT-{{$models->weight}}, HT-{{$models->height}}, B/C-{{$models->burst_chest}},
+                         SH-{{$models->shoe_size}}, HC-{{$models->hair_color}}, H-{{$models->hips}}, CX-{{$models->complexions}} </h5>
                     <h5> category: {{$models->category}}</h5>
                     <h5>Instagram : <a href="#">
                                         <em class="fab fa-instagram-square"></em> {{$models->instagram}}
@@ -146,7 +145,7 @@
 
                     <h5>Experience: {{$models->experience}}</h5>
                     <h5>Book Model: <a href="https://wa.me/254789133541"  class="btn"> <em class="fab fa-whatsapp fa-lg"></em> Whatsapp</a>
-                                    <a href="{{url('book_model')}}"  class="btn"> <em class="fab fa-phone fa-lg"></em> Send request</a></h5>
+                                    <a href="{{url('book_model',$models->id)}}"  class="btn"> <em class="fa fa-call fa-lg"></em> Send request</a></h5>
                 </span>
             </div>
 

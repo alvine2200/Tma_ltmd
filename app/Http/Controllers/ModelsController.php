@@ -92,6 +92,11 @@ class ModelsController extends Controller
 
         }
 
+        if($request->piercing){
+            $readyinput['piercing'] = json_encode($request->piercing);
+        }
+    
+
         $application::firstOrCreate($readyinput);
 
         return back()->with('success','Form submitted successfully');
@@ -107,9 +112,10 @@ class ModelsController extends Controller
 
     }
 
-    public function book_model()
+    public function book_model($id)
     {
-        return view('user.book_model');
+        $models=ApprovedModel::find($id);
+        return view('user.book_model',compact('models'));
     }
 
     public function booking_store(Request $request,BookModel $bookModel)
@@ -123,7 +129,7 @@ class ModelsController extends Controller
             'purpose'=>'required|string',
             'budget'=>'required|string',
             'models_name'=>'required|string',
-            
+
         ]);
 
         if($validator->fails())

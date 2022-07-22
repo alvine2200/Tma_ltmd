@@ -59,6 +59,13 @@
             {{$application->instagram}}
         </div>
         <div class="col-md-6">
+            Categories intrested in
+        </div>
+        <div class="col-md-6">
+            {{$application->category}}
+        </div>
+        
+        <div class="col-md-6">
             Gender
         </div>
         <div class="col-md-6">
@@ -450,7 +457,7 @@
         </div>
         <div class="col-md-6">
             Are you registered with any modelling agency, Name it?
-        </div>
+        </div>        
         <div class="col-md-6">
             {{$application->registered}}
         </div>

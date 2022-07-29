@@ -10,6 +10,7 @@
 			<a href="{{url('apply')}}">Apply</a>
 			<a href="{{url('contact')}}">contact us</a>
             <a href="{{url('butterfly')}}">Butterfly</a>
+            <a href="{{url('about')}}">About us</a>
 		</nav>
 
         @if (Session::has('success'))

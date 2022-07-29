@@ -12,7 +12,12 @@ class HomeController extends Controller
     {
         $model_index=ApprovedModel::paginate(6);
         return view ('user.index',compact('model_index'));
-        
+
+    }
+
+    public function about_us()
+    {
+        return view('user.about');
     }
 
 

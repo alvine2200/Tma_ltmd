@@ -4,7 +4,7 @@
         @if (Session::has('success'))
         <div class="alert alert-success alert-dismissible fade show">
             {{ Session::get('success') }}
-        </div>            
+        </div>
         @endif
 
         <?php Session::forget('success') ?>
@@ -24,14 +24,14 @@
             </tr>
             </thead>
             <tbody>
-                @foreach ($user as $apply )      
-                
+                @foreach ($user as $apply )
+
                 <tr>
                     <th scope="row">{{$apply->id}}</th>
                     <td>{{ $apply->fullname }}</td>
                     <td>{{ $apply->email }}</td>
                     <td>{{ $apply->phone }}</td>
-                    <td>{{ $apply->location }}</td>                    
+                    <td>{{ $apply->location }}</td>
                     <td>{{ $apply->status }}</td>
                     <td>{{ $apply->gender }}</td>
                     <td>{{ $apply->about_yourself }}</td>
@@ -49,5 +49,5 @@
 
 
      </div>
-            
+
 @endsection

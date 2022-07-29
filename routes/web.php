@@ -34,6 +34,7 @@ Route::get('login',[AdminController::class,'login_admin']);
 Route::any('/verify_user',[AdminController::class,'login_logic']);
 Route::get('book_model/{id}',[ModelsController::class,'book_model']);
 Route::post('post_book',[ModelsController::class,'booking_store']);
+Route::get('about',[HomeController::class,'about_us']);
 
 
 //admin begins

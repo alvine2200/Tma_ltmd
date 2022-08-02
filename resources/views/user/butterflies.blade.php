@@ -101,19 +101,19 @@
               <div class="row">
                 <div class="column width">
                     <span> Followers </span>
-                    <p style="font-weight:bold;">{{$data->followers}}</p>
+                    <p style="font-weight:bold;">{{$data->followers ?? '0'}}</p>
                 </div>
                 <div class="column width">
                     <span> Likes </span>
-                    <p style="font-weight:bold;">{{$data->likes}}</p>
+                    <p style="font-weight:bold;">{{$data->likes ?? '0'}}</p>
                 </div>
                 <div class="column width">
                     <span>Posts </span>
-                    <p style="font-weight:bold;">{{$data->posts}}</p>
+                    <p style="font-weight:bold;">{{$data->posts ?? '0'}}</p>
                 </div>
                 <div class="column width">
                     <span> Age Range</span>
-                    <p style="font-weight:bold;">{{$data->age_range}}</p>
+                    <p style="font-weight:bold;">{{$data->age_range ?? '0'}}</p>
                 </div>
 
               </div>

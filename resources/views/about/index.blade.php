@@ -341,8 +341,6 @@
                 </div>
             </div>
 
-
-
     </section>
 
     @include('user.footer')

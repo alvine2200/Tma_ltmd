@@ -97,9 +97,6 @@
                </a>
             @endforeach
 
-
-
-
         </div>
     </div>
 

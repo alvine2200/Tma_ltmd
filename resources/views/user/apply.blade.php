@@ -28,6 +28,20 @@
         .inputBox{
             padding-top: 2rem;
         }
+        .information{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding:4rem;
+            margin-bottom: 4rem;
+            border-radius:15px;
+            box-shadow:  rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        }
+        .information .text{
+            margin:20px;
+            font-size:16px;
+        }
     </style>
 </head>
 <body>
@@ -38,6 +52,15 @@
     <section class="order" id="contact_us">
         <h3 style="padding-top:17rem" class="sub-heading">Join us</h3>
         <h1 class="heading">Complete the form below and submit your request</h1>
+
+        <div class="information">
+            <span class="text">
+                At TMA, we value all our models and we always strive to offer the best of talent to our clientele.
+                Becoming a TMA model is more than just a procedure. It means you want to be the best at what you do
+                and are ready and committed to go for it. We are one happy family.
+                We look forward to growing with you!
+            </span>
+        </div>
 
         <form action="{{url('application_form')}}" method="post" enctype="multipart/form-data">
             @csrf
@@ -249,8 +272,8 @@
                     <option value="none">None</option>
                </select>
                <img src="images/nde.jpg" style="width: 350px; height: 250px; display:flex; flex-wrap: wrap; padding:10px;"class="img-responsive" alt="img">
-            </div>           
-            
+            </div>
+
             <div class="input">
                 <span>Would you be open to swimsuit/lingerie modelling?</span>
                 <select  name="swimsuit" style="width:100%">

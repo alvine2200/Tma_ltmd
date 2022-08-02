@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ModelsController;
 use App\Http\Controllers\User\HomeController;
 use App\Http\Controllers\Admin\AdminController;
@@ -34,10 +35,12 @@ Route::get('login',[AdminController::class,'login_admin']);
 Route::any('/verify_user',[AdminController::class,'login_logic']);
 Route::get('book_model/{id}',[ModelsController::class,'book_model']);
 Route::post('post_book',[ModelsController::class,'booking_store']);
+Route::any('about',[AboutController::class,'index']);
 
 
 //admin begins
 Route::group(['middleware'=>'auth'],function(){
+
     Route::get('stats',[ButterflyStatsController::class,'stats']);
     Route::post('post_stats',[ButterflyStatsController::class,'add_stats']);
     Route::get('show_stats/{id}',[ButterflyStatsController::class,'show_stats']);
